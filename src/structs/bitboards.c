@@ -306,8 +306,8 @@ const MoveDictionary kingMoveDictionary = {
 
 const SpecialMoveDictionary specialMoveDictionary = {
     .queenCastle = { 
-        0x6000000000000000,
-        0x0000000000000060
+        0x7000000000000000,
+        0x0000000000000070
     },
     .kingCastle = {
         0x0600000000000000,

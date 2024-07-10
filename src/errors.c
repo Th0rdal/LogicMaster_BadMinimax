@@ -72,7 +72,7 @@ _Noreturn void throwError(int exitCode, char* format, ...) {
     printf("\x1b[31m");
     printErrorCodeSpecification(exitCode);
     vfprintf(stderr, format, args);
-    printf("\x1b[0m");
+    printf("\n\x1b[0m");
     va_end(args);
     exit(exitCode);
 }
@@ -83,6 +83,6 @@ void throwWarning(int warningCode, char* format, ...) {
     printf("\x1b[33m" "Warning code: %d\n", warningCode);
     vfprintf(stderr, format, args);
     fprintf(stderr, "\n");
-    printf("\x1b[0m");
+    printf("\n\x1b[0m");
     va_end(args);
 }
