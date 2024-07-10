@@ -135,7 +135,10 @@ bool gamestateMakeMoveInternal(Gamestate* gamestate, Gamestate* newGamestate, co
             break;
         case KING:
             newGamestate->bitboards.king |= posBoard;
-            if ((newGamestate->flags.kCastle[side] | newGamestate->flags.qCastle[side]) & (piecePosition->rank == movePosition->rank)) {
+            
+            if ((abs(movePosition->file - piecePosition->file) > 1)
+                    && (newGamestate->flags.kCastle[side] | newGamestate->flags.qCastle[side])
+                    && (piecePosition->rank == movePosition->rank)) {
                 if (originalPos - pos > 1) {
                     newGamestate->move.flags.kCastle[side] = true;
                     newGamestate->bitboards.rook ^= specialMoveDictionary.kCastleRookBitboard[side];

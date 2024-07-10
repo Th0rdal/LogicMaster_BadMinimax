@@ -12,11 +12,11 @@ if "%1"=="all" (
 )
 
 REM Root directory
-set ROOT_DIR=src\main\algorithm\tests
+set ROOT_DIR=tests
 
 REM Paths
 set TARGET_DIR=target
-set SRC_INCLUDE_DIR=src\main\algorithm\include
+set SRC_INCLUDE_DIR=include
 set OBJECT_DIR=%TARGET_DIR%\object
 set TEST_OBJECT_DIR=%TARGET_DIR%\tests
 set TEST_INCLUDE_DIR=%ROOT_DIR%\include

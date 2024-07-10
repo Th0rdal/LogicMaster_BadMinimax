@@ -52,7 +52,6 @@ Position* getAllPiecePositions(const uint64_t bitboard, const short pieces) {
     return piecePositions;
 }
 
-
 void convertCharArrayToPosition(const char* fenChar, Position* position) {
     short temp;
     char file = *fenChar;

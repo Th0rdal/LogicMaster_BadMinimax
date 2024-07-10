@@ -96,7 +96,7 @@ echo Build successful.
 if "%1" neq "noExecution" (
 	echo Starting the executable...
 	echo.
-	"%TARGET%" -md 4 -mt 16 -ifen -om "rnb1kbnr/5ppp/p1p1p3/P1Pp4/3q4/8/3PPPPP/RNBQKBNR/ w KQkq - 0 14"
+	"%TARGET%" -ifen -om -md 4 -mt 16 "rnb1k1nr/5ppp/p1p1p3/P2p4/3P4/b7/3PPPPP/RNBQKBNR/ w KQkq - 1 17"
 )
 
 endlocal
