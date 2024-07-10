@@ -336,8 +336,8 @@ const SpecialMoveDictionary specialMoveDictionary = {
         0x0000000000000005
     },
     .qCastleRookBitboard = {
-        0xA000000000000000,
-        0x00000000000000A0
+        0x9000000000000000,
+        0x0000000000000090
     },
 };
 
