@@ -8,7 +8,7 @@ set OBJECT_DIR=%TARGET_DIR%\object
 set ASSEMBLY_DIR=%TARGET_DIR%\assembly
 set ROOT_DIR=%CD%
 set EXE_TARGET_DIR=%TARGET_DIR%
-set EXE_NAME=debug.exe
+set EXE_NAME=debugProgram.exe
 
 REM Compiler and flags
 set CC=gcc
@@ -100,4 +100,3 @@ if "%1" neq "noExecution" (
 )
 
 endlocal
-exit /b 0
