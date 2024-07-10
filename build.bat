@@ -2,29 +2,29 @@
 setlocal
 
 REM Standard paths
-set SRC_PATH=src\main\algorithm
+set SRC_PATH=src
 set TARGET_DIR=target
-set OBJECT_DIR=%TARGET_DIR%\object
-set ASSEMBLY_DIR=%TARGET_DIR%\assembly
-set ROOT_DIR=src\main\algorithm
-set EXE_TARGET_DIR=%1%\algorithms
+set OBJECT_DIR=%TARGET_DIR%\production
+set ROOT_DIR=%CD%
+if "%1" == "" (
+    set EXE_TARGET_DIR=%ROOT_DIR%
+) else (
+    set EXE_TARGET_DIR=%1%
+)
+set EXE_NAME=BadMinimax.exe
 
 REM Compiler and flags
 set CC=gcc
-set CFLAGS=-Wall -g -Wextra -pedantic -std=c11 -I%ROOT_DIR%\include
-
+set CFLAGS= -s -O2 -fstack-protector-strong -std=c11 -I%ROOT_DIR%\include
 
 REM Target executable
-set TARGET=%EXE_TARGET_DIR%\BadMinimaxAlgorithm.exe
+set TARGET=%EXE_TARGET_DIR%\%EXE_NAME%
+
 
 REM Remove old .o and .s files if they exist
 if exist "%OBJECT_DIR%\*.o" (
     echo Deleting old object files...
     del /q "%OBJECT_DIR%\*.o"
-)
-if exist "%ASSEMBLY_DIR%\*.s" (
-    echo Deleting old assembly files...
-    del /q "%ASSEMBLY_DIR%\*.s"
 )
 
 REM Create target directories if they don't exist
@@ -45,20 +45,14 @@ if not exist "%OBJECT_DIR%" (
         exit /b 1
     )
 )
-if not exist "%ASSEMBLY_DIR%" (
-    echo Creating assembly directory: %ASSEMBLY_DIR%
-    mkdir "%ASSEMBLY_DIR%"
-    if errorlevel 1 (
-        echo ERROR: Failed to create assembly directory.
-        exit /b 1
-    )
-)
+
+
 
 REM Compile all source files in the source directory and subdirectories, excluding the tests folder
 echo Compiling files...
 setlocal enabledelayedexpansion
 for /R "%ROOT_DIR%" %%f in (*.c) do (
-    echo %%f | find "\src\main\algorithm\tests\" >nul
+    echo %%f | find "%ROOT_DIR%\tests\" >nul
     if errorlevel 1 (
         echo Compiling %%f...
         set TEMPFILE=%OBJECT_DIR%\%%~nf.o
@@ -67,14 +61,6 @@ for /R "%ROOT_DIR%" %%f in (*.c) do (
         %CC% %CFLAGS% -c "%%f" -o !TEMPFILE!
         if errorlevel 1 (
             echo ERROR: Compilation failed for %%f
-            exit /b 1
-        )
-        echo Generating assembly file for %%f...
-        set ASSEMBLY_FILE=%ASSEMBLY_DIR%\%%~nf.s
-        echo Command: %CC% %CFLAGS% -S "%%f" -o !ASSEMBLY_FILE!
-        %CC% %CFLAGS% -w -S "%%f" -o !ASSEMBLY_FILE!
-        if errorlevel 1 (
-            echo ERROR: Failed to generate assembly file for %%f
             exit /b 1
         )
     )
@@ -88,8 +74,13 @@ if errorlevel 1 (
     exit /b 1
 )
 
+REM Check if the folder exists before deleting
+if exist "%OBJECT_DIR%" (
+    rd /s /q "%OBJECT_DIR%"
+)
+
+
 REM Check if the build was successful
 echo Build successful.
 
 endlocal
-exit /b 0

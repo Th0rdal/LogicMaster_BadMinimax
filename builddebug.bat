@@ -2,12 +2,13 @@
 setlocal
 
 REM Standard paths
-set SRC_PATH=..\..\src\main\algorithm
-set TARGET_DIR=..\..\target
+set SRC_PATH=src
+set TARGET_DIR=target
 set OBJECT_DIR=%TARGET_DIR%\object
 set ASSEMBLY_DIR=%TARGET_DIR%\assembly
-set ROOT_DIR=..\..\src\main\algorithm
+set ROOT_DIR=%CD%
 set EXE_TARGET_DIR=%TARGET_DIR%
+set EXE_NAME=debug.exe
 
 REM Compiler and flags
 set CC=gcc
@@ -15,7 +16,7 @@ set CFLAGS=-Wall -g -Wextra -pedantic -std=c11 -I%ROOT_DIR%\include
 
 
 REM Target executable
-set TARGET=%EXE_TARGET_DIR%\BadMinimaxAlgorithm.exe
+set TARGET=%EXE_TARGET_DIR%\%EXE_NAME%
 
 REM Remove old .o and .s files if they exist
 if exist "%OBJECT_DIR%\*.o" (
@@ -58,7 +59,7 @@ REM Compile all source files in the source directory and subdirectories, excludi
 echo Compiling files...
 setlocal enabledelayedexpansion
 for /R "%ROOT_DIR%" %%f in (*.c) do (
-    echo %%f | find "\src\main\algorithm\tests\" >nul
+    echo %%f | find "%ROOT_DIR%\tests\" >nul
     if errorlevel 1 (
         echo Compiling %%f...
         set TEMPFILE=%OBJECT_DIR%\%%~nf.o
@@ -95,7 +96,7 @@ echo Build successful.
 if "%1" neq "noExecution" (
 	echo Starting the executable...
 	echo.
-	"%TARGET%" algorithms/algorithm.exe -md 4 -mt 16 -ifen -om "rnb1kbnr/5ppp/p1p1p3/P1Pp4/3q4/8/3PPPPP/RNBQKBNR/ w KQkq - 0 14"
+	"%TARGET%" -md 4 -mt 16 -ifen -om "rnb1kbnr/5ppp/p1p1p3/P1Pp4/3q4/8/3PPPPP/RNBQKBNR/ w KQkq - 0 14"
 )
 
 endlocal
