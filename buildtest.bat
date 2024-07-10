@@ -3,7 +3,7 @@ setlocal
 
 if "%1"=="all" (
 	echo compiling main...
-	call build.bat noExecution
+	call builddebug.bat noExecution
 	if errorLevel 1 (
 		echo The build process failed. Execution of the program stopped.
 		exit /b 1

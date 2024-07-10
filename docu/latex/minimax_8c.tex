@@ -1,0 +1,56 @@
+\doxysection{src/main/algorithm/src/minimax/minimax.c File Reference}
+\hypertarget{minimax_8c}{}\label{minimax_8c}\index{src/main/algorithm/src/minimax/minimax.c@{src/main/algorithm/src/minimax/minimax.c}}
+{\ttfamily \#include "{}minimax/minimax.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{minimax_8c_ae466a1ca463da9dec266b58a7f10cf3d}{setup\+Max\+Threads}} (int max\+Threads)
+\item 
+\mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{minimax_8c_a0502784c4f3ed6e0e1f24805158734c5}{minimax}} (\mbox{\hyperlink{structcommand__args}{command\+\_\+args}} \texorpdfstring{$\ast$}{*}args, \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate)
+\item 
+void \mbox{\hyperlink{minimax_8c_af1a32f524072fc73d8453261aad90431}{print\+All\+Possible\+Moves}} (\mbox{\hyperlink{structcommand__args}{command\+\_\+args}} \texorpdfstring{$\ast$}{*}args, \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{minimax_8c_a0502784c4f3ed6e0e1f24805158734c5}\index{minimax.c@{minimax.c}!minimax@{minimax}}
+\index{minimax@{minimax}!minimax.c@{minimax.c}}
+\doxysubsubsection{\texorpdfstring{minimax()}{minimax()}}
+{\footnotesize\ttfamily \label{minimax_8c_a0502784c4f3ed6e0e1f24805158734c5} 
+\mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*} minimax (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcommand__args}{command\+\_\+args}} \texorpdfstring{$\ast$}{*}}]{args}{, }\item[{\mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}}]{gamestate}{}\end{DoxyParamCaption})}
+
+Implements the algorithm pipeline. preprocessing (move generation) -\/\texorpdfstring{$>$}{>} evaluation -\/\texorpdfstring{$>$}{>} post preprocessing -\/\texorpdfstring{$>$}{>} return
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & command args struct pointer with configuration \\
+\hline
+{\em gamestate} & an \doxylink{struct_gamestate}{Gamestate} struct pointer to write the result of the algorithm into \\
+\hline
+\end{DoxyParams}
+\Hypertarget{minimax_8c_af1a32f524072fc73d8453261aad90431}\index{minimax.c@{minimax.c}!printAllPossibleMoves@{printAllPossibleMoves}}
+\index{printAllPossibleMoves@{printAllPossibleMoves}!minimax.c@{minimax.c}}
+\doxysubsubsection{\texorpdfstring{printAllPossibleMoves()}{printAllPossibleMoves()}}
+{\footnotesize\ttfamily \label{minimax_8c_af1a32f524072fc73d8453261aad90431} 
+void print\+All\+Possible\+Moves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcommand__args}{command\+\_\+args}} \texorpdfstring{$\ast$}{*}}]{args}{, }\item[{\mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}}]{gamestate}{}\end{DoxyParamCaption})}
+
+Finds the given gamestate in the tree and prints all possible moves that can be made from that gamestate. That is done by printing all children of the Tree\+Node of the gamestate
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & command args struct pointer with configuration \\
+\hline
+{\em gamestate} & an \doxylink{struct_gamestate}{Gamestate} struct pointer to write the result of the algorithm into \\
+\hline
+\end{DoxyParams}
+\Hypertarget{minimax_8c_ae466a1ca463da9dec266b58a7f10cf3d}\index{minimax.c@{minimax.c}!setupMaxThreads@{setupMaxThreads}}
+\index{setupMaxThreads@{setupMaxThreads}!minimax.c@{minimax.c}}
+\doxysubsubsection{\texorpdfstring{setupMaxThreads()}{setupMaxThreads()}}
+{\footnotesize\ttfamily \label{minimax_8c_ae466a1ca463da9dec266b58a7f10cf3d} 
+static int setup\+Max\+Threads (\begin{DoxyParamCaption}\item[{int}]{max\+Threads}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+gets the number of processors for max\+Threads
+
+\begin{DoxyReturn}{Returns}
+\+: max\+Threads 
+\end{DoxyReturn}

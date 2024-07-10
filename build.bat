@@ -2,12 +2,12 @@
 setlocal
 
 REM Standard paths
-set SRC_PATH=..\..\src\main\algorithm
-set TARGET_DIR=..\..\target
+set SRC_PATH=src\main\algorithm
+set TARGET_DIR=target
 set OBJECT_DIR=%TARGET_DIR%\object
 set ASSEMBLY_DIR=%TARGET_DIR%\assembly
-set ROOT_DIR=..\..\src\main\algorithm
-set EXE_TARGET_DIR=..\..\algorithms
+set ROOT_DIR=src\main\algorithm
+set EXE_TARGET_DIR=%1%\algorithms
 
 REM Compiler and flags
 set CC=gcc
@@ -90,13 +90,6 @@ if errorlevel 1 (
 
 REM Check if the build was successful
 echo Build successful.
-
-
-if "%1" neq "noExecution" (
-	echo Starting the executable...
-	echo.
-	"%TARGET%" algorithms/algorithm.exe -md 4 -mt 16 -ifen -om "rnb1kbnr/5ppp/p1p1p3/P1Pp4/3q4/8/3PPPPP/RNBQKBNR/ w KQkq - 0 14"
-)
 
 endlocal
 exit /b 0

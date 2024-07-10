@@ -1,0 +1,47 @@
+\doxysection{src/main/algorithm/include/minimax/minimax.h File Reference}
+\hypertarget{minimax_8h}{}\label{minimax_8h}\index{src/main/algorithm/include/minimax/minimax.h@{src/main/algorithm/include/minimax/minimax.h}}
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include "{}preprocessing.\+h"{}}\newline
+{\ttfamily \#include "{}evaluation.\+h"{}}\newline
+{\ttfamily \#include "{}config.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{minimax_8h_a0502784c4f3ed6e0e1f24805158734c5}{minimax}} (\mbox{\hyperlink{structcommand__args}{command\+\_\+args}} \texorpdfstring{$\ast$}{*}args, \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate)
+\item 
+void \mbox{\hyperlink{minimax_8h_af1a32f524072fc73d8453261aad90431}{print\+All\+Possible\+Moves}} (\mbox{\hyperlink{structcommand__args}{command\+\_\+args}} \texorpdfstring{$\ast$}{*}args, \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{minimax_8h_a0502784c4f3ed6e0e1f24805158734c5}\index{minimax.h@{minimax.h}!minimax@{minimax}}
+\index{minimax@{minimax}!minimax.h@{minimax.h}}
+\doxysubsubsection{\texorpdfstring{minimax()}{minimax()}}
+{\footnotesize\ttfamily \label{minimax_8h_a0502784c4f3ed6e0e1f24805158734c5} 
+\mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*} minimax (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcommand__args}{command\+\_\+args}} \texorpdfstring{$\ast$}{*}}]{args}{, }\item[{\mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}}]{gamestate}{}\end{DoxyParamCaption})}
+
+Implements the algorithm pipeline. preprocessing (move generation) -\/\texorpdfstring{$>$}{>} evaluation -\/\texorpdfstring{$>$}{>} post preprocessing -\/\texorpdfstring{$>$}{>} return
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & command args struct pointer with configuration \\
+\hline
+{\em gamestate} & an \doxylink{struct_gamestate}{Gamestate} struct pointer to write the result of the algorithm into \\
+\hline
+\end{DoxyParams}
+\Hypertarget{minimax_8h_af1a32f524072fc73d8453261aad90431}\index{minimax.h@{minimax.h}!printAllPossibleMoves@{printAllPossibleMoves}}
+\index{printAllPossibleMoves@{printAllPossibleMoves}!minimax.h@{minimax.h}}
+\doxysubsubsection{\texorpdfstring{printAllPossibleMoves()}{printAllPossibleMoves()}}
+{\footnotesize\ttfamily \label{minimax_8h_af1a32f524072fc73d8453261aad90431} 
+void print\+All\+Possible\+Moves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcommand__args}{command\+\_\+args}} \texorpdfstring{$\ast$}{*}}]{args}{, }\item[{\mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}}]{gamestate}{}\end{DoxyParamCaption})}
+
+Finds the given gamestate in the tree and prints all possible moves that can be made from that gamestate. That is done by printing all children of the Tree\+Node of the gamestate
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & command args struct pointer with configuration \\
+\hline
+{\em gamestate} & an \doxylink{struct_gamestate}{Gamestate} struct pointer to write the result of the algorithm into \\
+\hline
+\end{DoxyParams}
