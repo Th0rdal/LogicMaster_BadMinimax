@@ -97,10 +97,10 @@ $(function(){ initResizable(false); });
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:adccfc510459a10df34702075fdd5d0e0" id="r_adccfc510459a10df34702075fdd5d0e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adccfc510459a10df34702075fdd5d0e0">preprocessing</a> (<a class="el" href="structcommand__args.html">command_args</a> *args, <a class="el" href="struct_gamestate.html">Gamestate</a> *gamestate)</td></tr>
-<tr class="separator:adccfc510459a10df34702075fdd5d0e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad117bb9b41aad9e6b4327af914cd6d33" id="r_ad117bb9b41aad9e6b4327af914cd6d33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad117bb9b41aad9e6b4327af914cd6d33">postprocessing</a> (<a class="el" href="structcommand__args.html">command_args</a> *args, <a class="el" href="struct_gamestate.html">Gamestate</a> *gamestate)</td></tr>
-<tr class="separator:ad117bb9b41aad9e6b4327af914cd6d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab566cbccb5e5c8e940113f5b642ca098" id="r_ab566cbccb5e5c8e940113f5b642ca098"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab566cbccb5e5c8e940113f5b642ca098">preprocessing</a> (<a class="el" href="structcommand__args.html">command_args</a> *args, <a class="el" href="struct_gamestate.html">Gamestate</a> *gamestate)</td></tr>
+<tr class="separator:ab566cbccb5e5c8e940113f5b642ca098"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13c99a0069940c00d3aa09bddaf33200" id="r_a13c99a0069940c00d3aa09bddaf33200"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13c99a0069940c00d3aa09bddaf33200">postprocessing</a> (<a class="el" href="structcommand__args.html">command_args</a> *args, <a class="el" href="struct_gamestate.html">Gamestate</a> *gamestate)</td></tr>
+<tr class="separator:a13c99a0069940c00d3aa09bddaf33200"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97" id="r_a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
 <tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -123,17 +123,26 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>main function handling everything</p>
+<dl class="section warning"><dt>Warning</dt><dd>ERROR_MEMORY_MALLOC_FAILED: if malloc failed </dd>
+<dd>
+ERROR_UNKNOWN_ARGUMENT: if the command line argument is unknown </dd>
+<dd>
+ERROR_NOINPUT: if the command expects some input afterwards, but it is not given </dd></dl>
 
 </div>
 </div>
-<a id="ad117bb9b41aad9e6b4327af914cd6d33" name="ad117bb9b41aad9e6b4327af914cd6d33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad117bb9b41aad9e6b4327af914cd6d33">&#9670;&#160;</a></span>postprocessing()</h2>
+<a id="a13c99a0069940c00d3aa09bddaf33200" name="a13c99a0069940c00d3aa09bddaf33200"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13c99a0069940c00d3aa09bddaf33200">&#9670;&#160;</a></span>postprocessing()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void postprocessing </td>
+          <td class="memname">static void postprocessing </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structcommand__args.html">command_args</a> *</td>          <td class="paramname"><span class="paramname"><em>args</em></span>, </td>
         </tr>
@@ -143,18 +152,34 @@ Functions</h2></td></tr>
           <td class="paramtype"><a class="el" href="struct_gamestate.html">Gamestate</a> *</td>          <td class="paramname"><span class="paramname"><em>gamestate</em></span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+<p>Converts the result gamestate into a format to be output</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>command line arguments passed in form of a pointer to <a class="el" href="structcommand__args.html">command_args</a> </td></tr>
+    <tr><td class="paramname">gamestate</td><td>the result move gamestate </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="adccfc510459a10df34702075fdd5d0e0" name="adccfc510459a10df34702075fdd5d0e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adccfc510459a10df34702075fdd5d0e0">&#9670;&#160;</a></span>preprocessing()</h2>
+<a id="ab566cbccb5e5c8e940113f5b642ca098" name="ab566cbccb5e5c8e940113f5b642ca098"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab566cbccb5e5c8e940113f5b642ca098">&#9670;&#160;</a></span>preprocessing()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void preprocessing </td>
+          <td class="memname">static void preprocessing </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structcommand__args.html">command_args</a> *</td>          <td class="paramname"><span class="paramname"><em>args</em></span>, </td>
         </tr>
@@ -164,6 +189,11 @@ Functions</h2></td></tr>
           <td class="paramtype"><a class="el" href="struct_gamestate.html">Gamestate</a> *</td>          <td class="paramname"><span class="paramname"><em>gamestate</em></span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Brings input into a normed format (gamestate) before giving it to the algorithm</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -174,7 +204,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>@exit: NOINPUT: if the input enum is not set or not recognized </p>
+<dl class="section warning"><dt>Warning</dt><dd>: NOINPUT: if the input enum is not set or not recognized </dd></dl>
 
 </div>
 </div>

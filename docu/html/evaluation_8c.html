@@ -130,10 +130,11 @@ Functions</h2></td></tr>
 <p>destroys the <a class="el" href="struct_evaluation_thread_pool.html">EvaluationThreadPool</a> struct and all needed fields</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pool</td><td>the struct to destroy </td></tr>
+    <tr><td class="paramname">pool</td><td>the struct to destroy</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section warning"><dt>Warning</dt><dd>ERROR_MEMORY_MALLOC_FAILED: if malloc failed </dd></dl>
 
 </div>
 </div>
@@ -151,7 +152,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>evaluates a specific gamestate based on an algorithm. Algorithm counts piece values for each sides and subtracts white pieces from black pieces draw is evaluated as 0, checkmate is + or - 100</p>
+<p>evaluates a specific gamestate based on an algorithm. Algorithm counts piece values for each sides and subtracts white pieces from black pieces draw is evaluated as 0, checkmate is + or - 100 NOT STATIC FOR TESTING PURPOSES</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">gamestate</td><td>the gamestate to evaluate </td></tr>
@@ -202,10 +203,11 @@ Functions</h2></td></tr>
 <p>starts evaluating the gamestate tree</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">args</td><td>command args struct pointer with configuration </td></tr>
+    <tr><td class="paramname">args</td><td>command args struct pointer with configuration</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section warning"><dt>Warning</dt><dd>ERROR_THREADS_TIMEOUT: if a thread took longer than the defined MAX_WAIT_TIME </dd></dl>
 
 </div>
 </div>

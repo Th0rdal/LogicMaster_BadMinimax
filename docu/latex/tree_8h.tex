@@ -26,15 +26,15 @@ void \mbox{\hyperlink{tree_8h_ae03cd5138ed6b2a741996aebf934c069}{initialize\+Tre
 \item 
 \mbox{\hyperlink{struct_gamestate_tree_node}{Gamestate\+Tree\+Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{tree_8h_a6e267f7b93fae4870e2cce6f3106b762}{create\+Gamestate\+Tree\+Node}} (\mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate)
 \item 
-void \mbox{\hyperlink{tree_8h_a139616ff5f4d91944ca247abc4ee8db3}{destroy\+Gamestate\+Tree\+Node\+With\+Inside}} (\mbox{\hyperlink{struct_gamestate_tree_node}{Gamestate\+Tree\+Node}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{stack_8h_af5ef8329d9a89f522542bae387e68c06}{node}})
+void \mbox{\hyperlink{tree_8h_a139616ff5f4d91944ca247abc4ee8db3}{destroy\+Gamestate\+Tree\+Node\+With\+Inside}} (\mbox{\hyperlink{struct_gamestate_tree_node}{Gamestate\+Tree\+Node}} \texorpdfstring{$\ast$}{*}node)
 \item 
 void \mbox{\hyperlink{tree_8h_a863e64b7063d39e0bf258806d08a1745}{destroy\+Gamestate\+Tree\+Branch\+With\+Inside}} (\mbox{\hyperlink{struct_gamestate_tree_branch}{Gamestate\+Tree\+Branch}} \texorpdfstring{$\ast$}{*}branch)
 \item 
 \mbox{\hyperlink{struct_gamestate_tree_node}{Gamestate\+Tree\+Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{tree_8h_ac9e0ff95d09337f9974a6c6bf712bcbe}{critical\+Create\+Gamestate\+Tree\+Node}} (struct \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate)
 \item 
-int \mbox{\hyperlink{tree_8h_aa50f2a17ec220501b95ba76e5f48db6d}{size}} (\mbox{\hyperlink{struct_gamestate_tree_node}{Gamestate\+Tree\+Node}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{stack_8h_af5ef8329d9a89f522542bae387e68c06}{node}})
+int \mbox{\hyperlink{tree_8h_aa50f2a17ec220501b95ba76e5f48db6d}{size}} (\mbox{\hyperlink{struct_gamestate_tree_node}{Gamestate\+Tree\+Node}} \texorpdfstring{$\ast$}{*}node)
 \item 
-\mbox{\hyperlink{struct_gamestate_tree_node}{Gamestate\+Tree\+Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{tree_8h_abb88bbf2d7ff79ffba5226ceb0f6529c}{search\+Gamestate\+In\+Tree}} (\mbox{\hyperlink{struct_gamestate_tree_node}{Gamestate\+Tree\+Node}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{stack_8h_af5ef8329d9a89f522542bae387e68c06}{node}}, \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate)
+\mbox{\hyperlink{struct_gamestate_tree_node}{Gamestate\+Tree\+Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{tree_8h_abb88bbf2d7ff79ffba5226ceb0f6529c}{search\+Gamestate\+In\+Tree}} (\mbox{\hyperlink{struct_gamestate_tree_node}{Gamestate\+Tree\+Node}} \texorpdfstring{$\ast$}{*}node, \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
@@ -50,13 +50,13 @@ int \mbox{\hyperlink{tree_8h_aa50f2a17ec220501b95ba76e5f48db6d}{size}} (\mbox{\h
 {\footnotesize\ttfamily \label{tree_8h_abb93fc06b07637970b274999760475f3} 
 typedef struct Gamestate\+Tree\+Branch Gamestate\+Tree\+Branch}
 
-\Hypertarget{tree_8h_ab8adacef989671d7375e1d736ffabe74}\index{tree.h@{tree.h}!GamestateTreeNode@{GamestateTreeNode}}
+represents a branch in the tree \Hypertarget{tree_8h_ab8adacef989671d7375e1d736ffabe74}\index{tree.h@{tree.h}!GamestateTreeNode@{GamestateTreeNode}}
 \index{GamestateTreeNode@{GamestateTreeNode}!tree.h@{tree.h}}
 \doxysubsubsection{\texorpdfstring{GamestateTreeNode}{GamestateTreeNode}}
 {\footnotesize\ttfamily \label{tree_8h_ab8adacef989671d7375e1d736ffabe74} 
 typedef struct Gamestate\+Tree\+Node Gamestate\+Tree\+Node}
 
-
+represents a node in the tree 
 
 \doxysubsection{Function Documentation}
 \Hypertarget{tree_8h_a6e267f7b93fae4870e2cce6f3106b762}\index{tree.h@{tree.h}!createGamestateTreeNode@{createGamestateTreeNode}}
@@ -89,8 +89,11 @@ creates a Critical Section for create\+Gamestate\+Tree\+Node. This needs to be u
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-\+: the node that was just created 
+\+: the node that was just created
 \end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+ERROR\+\_\+\+MEMORY\+\_\+\+MALLOC\+\_\+\+FAILED\+: if malloc fails 
+\end{DoxyWarning}
 \Hypertarget{tree_8h_a863e64b7063d39e0bf258806d08a1745}\index{tree.h@{tree.h}!destroyGamestateTreeBranchWithInside@{destroyGamestateTreeBranchWithInside}}
 \index{destroyGamestateTreeBranchWithInside@{destroyGamestateTreeBranchWithInside}!tree.h@{tree.h}}
 \doxysubsubsection{\texorpdfstring{destroyGamestateTreeBranchWithInside()}{destroyGamestateTreeBranchWithInside()}}
@@ -101,7 +104,14 @@ destroys a \doxylink{struct_gamestate_tree_branch}{Gamestate\+Tree\+Branch} stru
 
 
 \begin{DoxyParams}{Parameters}
-{\em branch} & pointer to the branch to destroy \\
+{\em branch} & pointer to the branch to destroy\\
+\hline
+\end{DoxyParams}
+destroys a \doxylink{struct_gamestate_tree_branch}{Gamestate\+Tree\+Branch} and calls destroy\+Gamestate\+Tree\+Node\+With\+Inside on its saved node
+
+
+\begin{DoxyParams}{Parameters}
+{\em branch} & the \doxylink{struct_gamestate_tree_branch}{Gamestate\+Tree\+Branch} to destroy \\
 \hline
 \end{DoxyParams}
 \Hypertarget{tree_8h_a139616ff5f4d91944ca247abc4ee8db3}\index{tree.h@{tree.h}!destroyGamestateTreeNodeWithInside@{destroyGamestateTreeNodeWithInside}}
@@ -114,7 +124,14 @@ destroys a \doxylink{struct_gamestate_tree_node}{Gamestate\+Tree\+Node} struct t
 
 
 \begin{DoxyParams}{Parameters}
-{\em node} & pointer to the node to destroy \\
+{\em node} & pointer to the node to destroy\\
+\hline
+\end{DoxyParams}
+destroys a \doxylink{struct_gamestate_tree_node}{Gamestate\+Tree\+Node} and calls destroy\+Gamestate\+Tree\+Branch\+With\+Inside on all children
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & the \doxylink{struct_gamestate_tree_node}{Gamestate\+Tree\+Node} to destroy \\
 \hline
 \end{DoxyParams}
 \Hypertarget{tree_8h_ae03cd5138ed6b2a741996aebf934c069}\index{tree.h@{tree.h}!initializeTree@{initializeTree}}
@@ -122,6 +139,8 @@ destroys a \doxylink{struct_gamestate_tree_node}{Gamestate\+Tree\+Node} struct t
 \doxysubsubsection{\texorpdfstring{initializeTree()}{initializeTree()}}
 {\footnotesize\ttfamily \label{tree_8h_ae03cd5138ed6b2a741996aebf934c069} 
 void initialize\+Tree (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+a global variable pointing to the tree structure
 
 initializes the \doxylink{struct_gamestate_tree}{Gamestate\+Tree}. This needs to be called before the tree variable can be used \Hypertarget{tree_8h_abb88bbf2d7ff79ffba5226ceb0f6529c}\index{tree.h@{tree.h}!searchGamestateInTree@{searchGamestateInTree}}
 \index{searchGamestateInTree@{searchGamestateInTree}!tree.h@{tree.h}}

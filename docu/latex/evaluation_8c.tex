@@ -31,16 +31,19 @@ destroys the \doxylink{struct_evaluation_thread_pool}{Evaluation\+Thread\+Pool} 
 
 
 \begin{DoxyParams}{Parameters}
-{\em pool} & the struct to destroy \\
+{\em pool} & the struct to destroy\\
 \hline
 \end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+ERROR\+\_\+\+MEMORY\+\_\+\+MALLOC\+\_\+\+FAILED\+: if malloc failed 
+\end{DoxyWarning}
 \Hypertarget{evaluation_8c_af48860981e0da1b97757e72fc2208a9b}\index{evaluation.c@{evaluation.c}!evaluate@{evaluate}}
 \index{evaluate@{evaluate}!evaluation.c@{evaluation.c}}
 \doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
 {\footnotesize\ttfamily \label{evaluation_8c_af48860981e0da1b97757e72fc2208a9b} 
 void evaluate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}}]{gamestate}{}\end{DoxyParamCaption})}
 
-evaluates a specific gamestate based on an algorithm. Algorithm counts piece values for each sides and subtracts white pieces from black pieces draw is evaluated as 0, checkmate is + or -\/ 100
+evaluates a specific gamestate based on an algorithm. Algorithm counts piece values for each sides and subtracts white pieces from black pieces draw is evaluated as 0, checkmate is + or -\/ 100 NOT STATIC FOR TESTING PURPOSES
 
 
 \begin{DoxyParams}{Parameters}
@@ -70,9 +73,12 @@ starts evaluating the gamestate tree
 
 
 \begin{DoxyParams}{Parameters}
-{\em args} & command args struct pointer with configuration \\
+{\em args} & command args struct pointer with configuration\\
 \hline
 \end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+ERROR\+\_\+\+THREADS\+\_\+\+TIMEOUT\+: if a thread took longer than the defined MAX\+\_\+\+WAIT\+\_\+\+TIME 
+\end{DoxyWarning}
 \Hypertarget{evaluation_8c_aa317f8ed226dbcc5e001a5750c37a2c9}\index{evaluation.c@{evaluation.c}!evaluationThreadPoolInit@{evaluationThreadPoolInit}}
 \index{evaluationThreadPoolInit@{evaluationThreadPoolInit}!evaluation.c@{evaluation.c}}
 \doxysubsubsection{\texorpdfstring{evaluationThreadPoolInit()}{evaluationThreadPoolInit()}}

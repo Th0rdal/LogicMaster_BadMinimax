@@ -25,24 +25,25 @@
 \DoxyCodeLine{00026\ }
 \DoxyCodeLine{00027\ \textcolor{comment}{//\ MAX\_WAIT\_TIME\ is\ set\ in\ minimax.h}}
 \DoxyCodeLine{00028\ }
-\DoxyCodeLine{00029\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
-\DoxyCodeLine{00030\ \ \ \ \ HANDLE*\ \mbox{\hyperlink{struct_evaluation_thread_pool_a33ee774caa2182e0f84eb82ee909b837}{threads}};}
-\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_evaluation_thread_pool_ae4aff24e68daaf170d520d40d09653b0}{maxThreads}};}
-\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_evaluation_thread_pool_a4e85e1f1ec1d1d6addd52151786c9f23}{shutdown}};}
-\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_evaluation_thread_pool_a4d8edee60a709a73267fc22a3aa307b2}{workCounter}};}
-\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{struct_gamestate_tree_node}{GamestateTreeNode}}*\ \mbox{\hyperlink{struct_evaluation_thread_pool_a0b213e552861e86c29a9cc3773f66206}{srcTree}};}
-\DoxyCodeLine{00035\ \ \ \ \ CRITICAL\_SECTION\ \mbox{\hyperlink{struct_evaluation_thread_pool_a622456d7b3a604259f238d9654d185e1}{lock}};}
-\DoxyCodeLine{00036\ \}\mbox{\hyperlink{struct_evaluation_thread_pool}{EvaluationThreadPool}};}
-\DoxyCodeLine{00037\ }
-\DoxyCodeLine{00045\ DWORD\ WINAPI\ \mbox{\hyperlink{evaluation_8h_abe33aef1087eaaf15a3a6777e688436d}{evaluationWorker}}(LPVOID\ lpParam);}
-\DoxyCodeLine{00046\ }
-\DoxyCodeLine{00055\ \mbox{\hyperlink{struct_evaluation_thread_pool}{EvaluationThreadPool}}*\ \mbox{\hyperlink{evaluation_8h_aa317f8ed226dbcc5e001a5750c37a2c9}{evaluationThreadPoolInit}}(\mbox{\hyperlink{structcommand__args}{command\_args}}*\ args,\ \mbox{\hyperlink{struct_gamestate_tree_node}{GamestateTreeNode}}*\ srcTree);}
-\DoxyCodeLine{00056\ }
-\DoxyCodeLine{00064\ \mbox{\hyperlink{struct_gamestate}{Gamestate}}*\ \mbox{\hyperlink{evaluation_8h_a6639a209f2a893da95483020eff5bc2b}{evaluateLastGamestate}}(\mbox{\hyperlink{struct_gamestate_tree_node}{GamestateTreeNode}}*\ gamestateTreeNode);}
-\DoxyCodeLine{00065\ }
-\DoxyCodeLine{00072\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{evaluation_8h_a6dcefefcc70cadf47909988dddf6022f}{destroyEvaluationThreadPool}}(\mbox{\hyperlink{struct_evaluation_thread_pool}{EvaluationThreadPool}}*\ pool);}
-\DoxyCodeLine{00073\ }
-\DoxyCodeLine{00079\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{evaluation_8h_a41f66b1095452d025bb35d555bde5903}{evaluation\_start}}(\mbox{\hyperlink{structcommand__args}{command\_args}}*\ args);}
-\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00031\ \ \ \ \ HANDLE*\ \mbox{\hyperlink{struct_evaluation_thread_pool_a33ee774caa2182e0f84eb82ee909b837}{threads}};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_evaluation_thread_pool_ae4aff24e68daaf170d520d40d09653b0}{maxThreads}};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_evaluation_thread_pool_a4e85e1f1ec1d1d6addd52151786c9f23}{shutdown}};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_evaluation_thread_pool_a4d8edee60a709a73267fc22a3aa307b2}{workCounter}};}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{struct_gamestate_tree_node}{GamestateTreeNode}}*\ \mbox{\hyperlink{struct_evaluation_thread_pool_a0b213e552861e86c29a9cc3773f66206}{srcTree}};}
+\DoxyCodeLine{00036\ \ \ \ \ CRITICAL\_SECTION\ \mbox{\hyperlink{struct_evaluation_thread_pool_a622456d7b3a604259f238d9654d185e1}{lock}};}
+\DoxyCodeLine{00037\ \}\mbox{\hyperlink{struct_evaluation_thread_pool}{EvaluationThreadPool}};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00046\ DWORD\ WINAPI\ \mbox{\hyperlink{evaluation_8h_abe33aef1087eaaf15a3a6777e688436d}{evaluationWorker}}(LPVOID\ lpParam);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00056\ \mbox{\hyperlink{struct_evaluation_thread_pool}{EvaluationThreadPool}}*\ \mbox{\hyperlink{evaluation_8h_aa317f8ed226dbcc5e001a5750c37a2c9}{evaluationThreadPoolInit}}(\mbox{\hyperlink{structcommand__args}{command\_args}}*\ args,\ \mbox{\hyperlink{struct_gamestate_tree_node}{GamestateTreeNode}}*\ srcTree);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00065\ \mbox{\hyperlink{struct_gamestate}{Gamestate}}*\ \mbox{\hyperlink{evaluation_8h_a6639a209f2a893da95483020eff5bc2b}{evaluateLastGamestate}}(\mbox{\hyperlink{struct_gamestate_tree_node}{GamestateTreeNode}}*\ gamestateTreeNode);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00074\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{evaluation_8h_a6dcefefcc70cadf47909988dddf6022f}{destroyEvaluationThreadPool}}(\mbox{\hyperlink{struct_evaluation_thread_pool}{EvaluationThreadPool}}*\ pool);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00083\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{evaluation_8h_a41f66b1095452d025bb35d555bde5903}{evaluation\_start}}(\mbox{\hyperlink{structcommand__args}{command\_args}}*\ args);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

@@ -117,9 +117,12 @@ destroys the \doxylink{struct_evaluation_thread_pool}{Evaluation\+Thread\+Pool} 
 
 
 \begin{DoxyParams}{Parameters}
-{\em pool} & the struct to destroy \\
+{\em pool} & the struct to destroy\\
 \hline
 \end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+ERROR\+\_\+\+MEMORY\+\_\+\+MALLOC\+\_\+\+FAILED\+: if malloc failed 
+\end{DoxyWarning}
 \Hypertarget{evaluation_8h_a6639a209f2a893da95483020eff5bc2b}\index{evaluation.h@{evaluation.h}!evaluateLastGamestate@{evaluateLastGamestate}}
 \index{evaluateLastGamestate@{evaluateLastGamestate}!evaluation.h@{evaluation.h}}
 \doxysubsubsection{\texorpdfstring{evaluateLastGamestate()}{evaluateLastGamestate()}}
@@ -143,9 +146,12 @@ starts evaluating the gamestate tree
 
 
 \begin{DoxyParams}{Parameters}
-{\em args} & command args struct pointer with configuration \\
+{\em args} & command args struct pointer with configuration\\
 \hline
 \end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+ERROR\+\_\+\+THREADS\+\_\+\+TIMEOUT\+: if a thread took longer than the defined MAX\+\_\+\+WAIT\+\_\+\+TIME 
+\end{DoxyWarning}
 \Hypertarget{evaluation_8h_aa317f8ed226dbcc5e001a5750c37a2c9}\index{evaluation.h@{evaluation.h}!evaluationThreadPoolInit@{evaluationThreadPoolInit}}
 \index{evaluationThreadPoolInit@{evaluationThreadPoolInit}!evaluation.h@{evaluation.h}}
 \doxysubsubsection{\texorpdfstring{evaluationThreadPoolInit()}{evaluationThreadPoolInit()}}

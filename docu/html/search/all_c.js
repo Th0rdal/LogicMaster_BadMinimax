@@ -20,9 +20,8 @@ var searchData=
   ['movecalculation_2eh_17',['moveCalculation.h',['../move_calculation_8h.html',1,'']]],
   ['movedictionary_18',['MoveDictionary',['../struct_move_dictionary.html',1,'']]],
   ['moveflags_19',['MoveFlags',['../struct_move_flags.html',1,'']]],
-  ['moveflagsinit_20',['moveFlagsInit',['../move_8c.html#a63e46d93cb09be90c212de06a9543a29',1,'move.c']]],
+  ['moveflagsinit_20',['moveFlagsInit',['../move_8c.html#a00fe0e8ba1c1d66e1b7fd6bcd1a15762',1,'move.c']]],
   ['movegenerationthreadpool_21',['MoveGenerationThreadPool',['../struct_move_generation_thread_pool.html',1,'']]],
   ['movegenerationthreadpoolinit_22',['moveGenerationThreadPoolInit',['../preprocessing_8c.html#a441abee92b3d504e4e0daa6bb89a6cb6',1,'moveGenerationThreadPoolInit(command_args *args):&#160;preprocessing.c'],['../preprocessing_8h.html#a441abee92b3d504e4e0daa6bb89a6cb6',1,'moveGenerationThreadPoolInit(command_args *args):&#160;preprocessing.c']]],
-  ['moveinit_23',['moveInit',['../move_8c.html#a68b718383ebfe8304c7d89765994996b',1,'moveInit():&#160;move.c'],['../move_8h.html#a68b718383ebfe8304c7d89765994996b',1,'moveInit():&#160;move.c']]],
-  ['moveposition_24',['movePosition',['../gamestate_8h.html#adad974fcef088bfdaf5af08162a25f31',1,'gamestate.h']]]
+  ['moveinit_23',['moveInit',['../move_8c.html#a68b718383ebfe8304c7d89765994996b',1,'moveInit():&#160;move.c'],['../move_8h.html#a68b718383ebfe8304c7d89765994996b',1,'moveInit():&#160;move.c']]]
 ];

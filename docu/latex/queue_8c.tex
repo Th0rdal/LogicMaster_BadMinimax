@@ -46,9 +46,18 @@ adds a \doxylink{struct_gamestate}{Gamestate} to the queue
 \begin{DoxyParams}{Parameters}
 {\em queue} & the queue to add the gamestate to \\
 \hline
-{\em gamestate} & the gamestate to add \\
+{\em gamestate} & the gamestate to add\\
 \hline
 \end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+WARNING\+\_\+\+QUEUE\+\_\+\+TOO\+\_\+\+SMALL\+: if the queue is too small 
+
+WARNING\+\_\+\+RESIZING\+\_\+\+QUEUE\+: if the queue is resized 
+
+ERROR\+\_\+\+MALLOC\+\_\+\+REALLOC\+\_\+\+FAILED\+: if the realloc function failed 
+
+ERROR\+\_\+\+QUEUE\+\_\+\+TOO\+\_\+\+SMALL\+: if QUEUE\+\_\+\+RESIZE is not defined and the queue is full 
+\end{DoxyWarning}
 \Hypertarget{queue_8c_a9aa85e51775cc7e4ae6ac074d5dc0a3a}\index{queue.c@{queue.c}!queueInit@{queueInit}}
 \index{queueInit@{queueInit}!queue.c@{queue.c}}
 \doxysubsubsection{\texorpdfstring{queueInit()}{queueInit()}}
@@ -59,6 +68,9 @@ initializes the queue struct
 
 
 \begin{DoxyParams}{Parameters}
-{\em max\+Depth} & a value that will be multiplied with QUEUE\+\_\+\+SIZE\+\_\+\+BASE to determine the queue size \\
+{\em max\+Depth} & a value that will be multiplied with QUEUE\+\_\+\+SIZE\+\_\+\+BASE to determine the queue size\\
 \hline
 \end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+ERROR\+\_\+\+MEMORY\+\_\+\+MALLOC\+\_\+\+FAILED\+: if malloc fails 
+\end{DoxyWarning}

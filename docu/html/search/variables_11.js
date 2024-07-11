@@ -5,5 +5,5 @@ var searchData=
   ['specialmovedictionary_2',['specialMoveDictionary',['../bitboards_8c.html#aae369e3c07155d6ccf9330947efbed91',1,'specialMoveDictionary:&#160;bitboards.c'],['../bitboards_8h.html#aae369e3c07155d6ccf9330947efbed91',1,'specialMoveDictionary:&#160;bitboards.c']]],
   ['srctree_3',['srcTree',['../struct_evaluation_thread_pool.html#a0b213e552861e86c29a9cc3773f66206',1,'EvaluationThreadPool']]],
   ['startposition_4',['startPosition',['../struct_move.html#aac0b35534f7ba60ee08090099ae5ed78',1,'Move']]],
-  ['state_5',['state',['../struct_evaluation_data.html#ae0562d3e0833896c508bc646d05f61f6',1,'EvaluationData::state'],['../stack_8h.html#a275f5633395aa71f87a24f33d5686d5e',1,'state:&#160;stack.h']]]
+  ['state_5',['state',['../struct_evaluation_data.html#ae0562d3e0833896c508bc646d05f61f6',1,'EvaluationData']]]
 ];

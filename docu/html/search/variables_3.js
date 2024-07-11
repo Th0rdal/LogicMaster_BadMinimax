@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['data_0',['data',['../struct_queue.html#a9ce6063c598fe437e7b71232304581ac',1,'Queue::data'],['../stack_8h.html#a718c1bf5a3bf21ebb980203b142e5b75',1,'data:&#160;stack.h']]],
+  ['data_0',['data',['../struct_queue.html#a9ce6063c598fe437e7b71232304581ac',1,'Queue']]],
   ['depth_1',['depth',['../struct_gamestate_config.html#a71db296f82a16f973f92770b8b8ad70a',1,'GamestateConfig']]],
   ['dequeue_5fwait_5ftime_2',['DEQUEUE_WAIT_TIME',['../queue_8h.html#a03d855633a71dbe796c2bbc3d5edc54c',1,'queue.h']]],
   ['diagonal1_3',['diagonal1',['../struct_diagonal_bitboards.html#a5828a12a52c402cdbb27bd4e7f6275f0',1,'DiagonalBitboards']]],

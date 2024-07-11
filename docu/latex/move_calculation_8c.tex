@@ -4,43 +4,43 @@
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-static uint64\+\_\+t \mbox{\hyperlink{move_calculation_8c_a006f40805f5acd5257736b71804d64f0}{horizontal\+Slide}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const short \mbox{\hyperlink{move_calculation_8h_a0cba79494eb2ea98920c12f6f7748fd1}{position}})
+static uint64\+\_\+t \mbox{\hyperlink{move_calculation_8c_a006f40805f5acd5257736b71804d64f0}{horizontal\+Slide}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const short position)
 \item 
-static uint64\+\_\+t \mbox{\hyperlink{move_calculation_8c_a7a965a1f303b79d6720108c2c47209ae}{vertical\+Slide}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const short \mbox{\hyperlink{move_calculation_8h_a0cba79494eb2ea98920c12f6f7748fd1}{position}})
+static uint64\+\_\+t \mbox{\hyperlink{move_calculation_8c_a7a965a1f303b79d6720108c2c47209ae}{vertical\+Slide}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const short position)
 \item 
-static uint64\+\_\+t \mbox{\hyperlink{move_calculation_8c_a0b0952353b9938e6ca93ee52eea619bb}{diagonal\+Slide}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const short \mbox{\hyperlink{move_calculation_8h_a0cba79494eb2ea98920c12f6f7748fd1}{position}})
+static uint64\+\_\+t \mbox{\hyperlink{move_calculation_8c_a0b0952353b9938e6ca93ee52eea619bb}{diagonal\+Slide}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const short position)
 \item 
-static uint64\+\_\+t \mbox{\hyperlink{move_calculation_8c_afb80a452de9111d9eecb24d5b0dd48c7}{anti\+Diagonal\+Slide}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const short \mbox{\hyperlink{move_calculation_8h_a0cba79494eb2ea98920c12f6f7748fd1}{position}})
+static uint64\+\_\+t \mbox{\hyperlink{move_calculation_8c_afb80a452de9111d9eecb24d5b0dd48c7}{anti\+Diagonal\+Slide}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const short position)
 \item 
-static \mbox{\hyperlink{move_calculation_8c_a8c8313d05785802938c6d8a2a7fa3e09}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}} ((always\+\_\+inline))
+static uint64\+\_\+t \mbox{\hyperlink{move_calculation_8c_a7aed13685ea30837b526e625aa4d564c}{\+\_\+\+\_\+horizontal\+Slide}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const short position, const bool for\+White\+Piece)
 \item 
-bool \mbox{\hyperlink{move_calculation_8c_a3e9c382aeb62a6a3a1a01d3aa40ed997}{make\+Move\+And\+Check\+Legal}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const enum \mbox{\hyperlink{move_8h_a30867d32ae0c776ddd66b07a2f4d930d}{PIECE}} piece, const \mbox{\hyperlink{struct_position}{Position}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{gamestate_8h_a818ce1ed710aea0606d9f411008b51c9}{piece\+Position}}, const \mbox{\hyperlink{struct_position}{Position}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{gamestate_8h_adad974fcef088bfdaf5af08162a25f31}{move\+Position}})
+static uint64\+\_\+t \mbox{\hyperlink{move_calculation_8c_a07e6eb2c0dffc233267a25ea481ea222}{\+\_\+\+\_\+vertical\+Slide}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const short position, const bool for\+White\+Piece)
 \item 
-uint64\+\_\+t \mbox{\hyperlink{move_calculation_8c_a25344c1adf9452c74eba64b52a68acc1}{square\+Attacked}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const \mbox{\hyperlink{struct_position}{Position}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{move_calculation_8h_a0cba79494eb2ea98920c12f6f7748fd1}{position}}, const bool check\+For\+White)
+static uint64\+\_\+t \mbox{\hyperlink{move_calculation_8c_a346102598677a1e4ef53e4f8cbea1d03}{\+\_\+\+\_\+diagonal\+Slide}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const short position, const bool for\+White\+Piece)
 \item 
-uint64\+\_\+t \mbox{\hyperlink{move_calculation_8c_aec9cc9dea87aa3ef94be9822fd61c1e7}{pawn\+Moves\+With\+Side\+Selection}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const \mbox{\hyperlink{struct_position}{Position}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{move_calculation_8h_a0cba79494eb2ea98920c12f6f7748fd1}{position}}, const bool for\+White\+Piece)
-\item 
-uint64\+\_\+t \mbox{\hyperlink{move_calculation_8c_a5493f89cd8743d1f3cd77a2cf2e2b2f4}{rook\+Moves\+With\+Side\+Selection}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const \mbox{\hyperlink{struct_position}{Position}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{move_calculation_8h_a0cba79494eb2ea98920c12f6f7748fd1}{position}}, const bool for\+White\+Piece)
-\item 
-uint64\+\_\+t \mbox{\hyperlink{move_calculation_8c_a23f483e1363cdab1a9188b6fd36cbc74}{knight\+Moves\+With\+Side\+Selection}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const \mbox{\hyperlink{struct_position}{Position}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{move_calculation_8h_a0cba79494eb2ea98920c12f6f7748fd1}{position}}, const bool for\+White\+Piece)
-\item 
-uint64\+\_\+t \mbox{\hyperlink{move_calculation_8c_af83d3657f5acf5e51e4d34d18536502f}{bishop\+Moves\+With\+Side\+Selection}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const \mbox{\hyperlink{struct_position}{Position}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{move_calculation_8h_a0cba79494eb2ea98920c12f6f7748fd1}{position}}, const bool for\+White\+Piece)
-\item 
-uint64\+\_\+t \mbox{\hyperlink{move_calculation_8c_abd922e0ed96d736455c83dccc1da418f}{queen\+Moves\+With\+Side\+Selection}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const \mbox{\hyperlink{struct_position}{Position}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{move_calculation_8h_a0cba79494eb2ea98920c12f6f7748fd1}{position}}, const bool for\+White\+Piece)
-\item 
-uint64\+\_\+t \mbox{\hyperlink{move_calculation_8c_a4f81e011575e16adc40f0c063c77e15e}{king\+Moves\+With\+Side\+Selection}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const \mbox{\hyperlink{struct_position}{Position}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{move_calculation_8h_a0cba79494eb2ea98920c12f6f7748fd1}{position}}, const bool for\+White\+Piece)
+static uint64\+\_\+t \mbox{\hyperlink{move_calculation_8c_afb077dda3e99f1b8fad3c8bc64d10fdb}{\+\_\+\+\_\+anti\+Diagonal\+Slide}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const short position, const bool for\+White\+Piece)
 \item 
 static bool \mbox{\hyperlink{move_calculation_8c_a55a7116e2dd4259c698235d414d9b535}{can\+KCastle}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate)
 \item 
 static bool \mbox{\hyperlink{move_calculation_8c_a76e6ee7f66917a2083d34e461c58ae06}{can\+QCastle}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate)
 \item 
-static uint64\+\_\+t \mbox{\hyperlink{move_calculation_8c_a7aed13685ea30837b526e625aa4d564c}{\+\_\+\+\_\+horizontal\+Slide}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const short \mbox{\hyperlink{move_calculation_8h_a0cba79494eb2ea98920c12f6f7748fd1}{position}}, const bool for\+White\+Piece)
+uint64\+\_\+t \mbox{\hyperlink{move_calculation_8c_a5a42e210c7a2d227fdd59a3d04683182}{create\+Possible\+Moves\+After\+Check}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const \mbox{\hyperlink{struct_position}{Position}} \texorpdfstring{$\ast$}{*}king\+Position, const bool for\+White\+Piece)
 \item 
-static uint64\+\_\+t \mbox{\hyperlink{move_calculation_8c_a07e6eb2c0dffc233267a25ea481ea222}{\+\_\+\+\_\+vertical\+Slide}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const short \mbox{\hyperlink{move_calculation_8h_a0cba79494eb2ea98920c12f6f7748fd1}{position}}, const bool for\+White\+Piece)
+bool \mbox{\hyperlink{move_calculation_8c_a3e9c382aeb62a6a3a1a01d3aa40ed997}{make\+Move\+And\+Check\+Legal}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const enum \mbox{\hyperlink{move_8h_a30867d32ae0c776ddd66b07a2f4d930d}{PIECE}} piece, const \mbox{\hyperlink{struct_position}{Position}} \texorpdfstring{$\ast$}{*}piece\+Position, const \mbox{\hyperlink{struct_position}{Position}} \texorpdfstring{$\ast$}{*}move\+Position)
 \item 
-static uint64\+\_\+t \mbox{\hyperlink{move_calculation_8c_afb077dda3e99f1b8fad3c8bc64d10fdb}{\+\_\+\+\_\+anti\+Diagonal\+Slide}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const short \mbox{\hyperlink{move_calculation_8h_a0cba79494eb2ea98920c12f6f7748fd1}{position}}, const bool for\+White\+Piece)
+uint64\+\_\+t \mbox{\hyperlink{move_calculation_8c_a25344c1adf9452c74eba64b52a68acc1}{square\+Attacked}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const \mbox{\hyperlink{struct_position}{Position}} \texorpdfstring{$\ast$}{*}position, const bool check\+For\+White)
 \item 
-static uint64\+\_\+t \mbox{\hyperlink{move_calculation_8c_a346102598677a1e4ef53e4f8cbea1d03}{\+\_\+\+\_\+diagonal\+Slide}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const short \mbox{\hyperlink{move_calculation_8h_a0cba79494eb2ea98920c12f6f7748fd1}{position}}, const bool for\+White\+Piece)
+uint64\+\_\+t \mbox{\hyperlink{move_calculation_8c_aec9cc9dea87aa3ef94be9822fd61c1e7}{pawn\+Moves\+With\+Side\+Selection}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const \mbox{\hyperlink{struct_position}{Position}} \texorpdfstring{$\ast$}{*}position, const bool for\+White\+Piece)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{move_calculation_8c_a5493f89cd8743d1f3cd77a2cf2e2b2f4}{rook\+Moves\+With\+Side\+Selection}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const \mbox{\hyperlink{struct_position}{Position}} \texorpdfstring{$\ast$}{*}position, const bool for\+White\+Piece)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{move_calculation_8c_a23f483e1363cdab1a9188b6fd36cbc74}{knight\+Moves\+With\+Side\+Selection}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const \mbox{\hyperlink{struct_position}{Position}} \texorpdfstring{$\ast$}{*}position, const bool for\+White\+Piece)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{move_calculation_8c_af83d3657f5acf5e51e4d34d18536502f}{bishop\+Moves\+With\+Side\+Selection}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const \mbox{\hyperlink{struct_position}{Position}} \texorpdfstring{$\ast$}{*}position, const bool for\+White\+Piece)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{move_calculation_8c_abd922e0ed96d736455c83dccc1da418f}{queen\+Moves\+With\+Side\+Selection}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const \mbox{\hyperlink{struct_position}{Position}} \texorpdfstring{$\ast$}{*}position, const bool for\+White\+Piece)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{move_calculation_8c_a4f81e011575e16adc40f0c063c77e15e}{king\+Moves\+With\+Side\+Selection}} (const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, const \mbox{\hyperlink{struct_position}{Position}} \texorpdfstring{$\ast$}{*}position, const bool for\+White\+Piece)
 \end{DoxyCompactItemize}
 
 
@@ -65,63 +65,7 @@ calculates all possible positions a sliding piece (e.\+g., bishop) can have in d
 \begin{DoxyReturn}{Returns}
 \+: bitboard representing all attacks the piece can make in the anti diagonal direction
 \end{DoxyReturn}
-OPTIMIZATION\+: instead of calculating the possible moves based on the diagonal/anti diagonal, I could have a lookup table. bitboard representing all attacks the piece can make in diagonal direction \Hypertarget{move_calculation_8c_a8c8313d05785802938c6d8a2a7fa3e09}\index{moveCalculation.c@{moveCalculation.c}!\_\_attribute\_\_@{\_\_attribute\_\_}}
-\index{\_\_attribute\_\_@{\_\_attribute\_\_}!moveCalculation.c@{moveCalculation.c}}
-\doxysubsubsection{\texorpdfstring{\_\_attribute\_\_()}{\_\_attribute\_\_()}}
-{\footnotesize\ttfamily \label{move_calculation_8c_a8c8313d05785802938c6d8a2a7fa3e09} 
-static \+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(always\+\_\+inline)}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
-Just a middle function when I want to calculate moves in preprocessing where it is always the opposite color of gamestate. Calls the real horizontal\+Slide function (\+\_\+\+\_\+horizontal\+Slide).
-
-
-\begin{DoxyParams}{Parameters}
-{\em gamestate} & gamestate struct representing the current gamestate \\
-\hline
-{\em position} & the position of the attacking piece (0 = H1, 7=A1, 63=A8)\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-\+: bitboard representing all attacks the piece can make in horizontal direction
-\end{DoxyReturn}
-Just a middle function when I want to calculate moves in preprocessing where it is always the opposite color of gamestate. Calls the real vertical\+Slide function (\+\_\+\+\_\+vertical\+Slide).
-
-
-\begin{DoxyParams}{Parameters}
-{\em gamestate} & gamestate struct representing the current gamestate \\
-\hline
-{\em position} & the position of the attacking piece (0 = H1, 7=A1, 63=A8)\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-\+: bitboard representing all attacks the piece can make in vertical direction
-\end{DoxyReturn}
-Just a middle function when I want to calculate moves in preprocessing where it is always the opposite color of gamestate. Calls the real anti\+Diagonal\+Slide function (\+\_\+\+\_\+anti\+Diagonal\+Slide).
-
-
-\begin{DoxyParams}{Parameters}
-{\em gamestate} & gamestate struct representing the current gamestate \\
-\hline
-{\em position} & the position of the attacking piece (0 = H1, 7=A1, 63=A8)\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-\+: bitboard representing all attacks the piece can make in the anti diagonal direction
-\end{DoxyReturn}
-OPTIMIZATION\+: instead of calculating the possible moves based on the diagonal/anti diagonal, I could have a lookup table. bitboard representing all attacks the piece can make in diagonal direction
-
-Just a middle function when I want to calculate moves in preprocessing where it is always the opposite color of gamestate. Calls the real anti\+Diagonal\+Slide function (\+\_\+\+\_\+anti\+Diagonal\+Slide).
-
-
-\begin{DoxyParams}{Parameters}
-{\em gamestate} & gamestate struct representing the current gamestate \\
-\hline
-{\em position} & the position of the attacking piece (0 = H1, 7=A1, 63=A8)\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-\+: bitboard representing all attacks the piece can make in diagonal direction 
-\end{DoxyReturn}
-\Hypertarget{move_calculation_8c_a346102598677a1e4ef53e4f8cbea1d03}\index{moveCalculation.c@{moveCalculation.c}!\_\_diagonalSlide@{\_\_diagonalSlide}}
+OPTIMIZATION\+: instead of calculating the possible moves based on the diagonal/anti diagonal, I could have a lookup table. bitboard representing all attacks the piece can make in diagonal direction \Hypertarget{move_calculation_8c_a346102598677a1e4ef53e4f8cbea1d03}\index{moveCalculation.c@{moveCalculation.c}!\_\_diagonalSlide@{\_\_diagonalSlide}}
 \index{\_\_diagonalSlide@{\_\_diagonalSlide}!moveCalculation.c@{moveCalculation.c}}
 \doxysubsubsection{\texorpdfstring{\_\_diagonalSlide()}{\_\_diagonalSlide()}}
 {\footnotesize\ttfamily \label{move_calculation_8c_a346102598677a1e4ef53e4f8cbea1d03} 
@@ -187,7 +131,19 @@ calculates all possible positions a sliding piece (e.\+g., rook) can have in ver
 {\footnotesize\ttfamily \label{move_calculation_8c_afb80a452de9111d9eecb24d5b0dd48c7} 
 static uint64\+\_\+t anti\+Diagonal\+Slide (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}}]{gamestate}{, }\item[{const short}]{position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
-\Hypertarget{move_calculation_8c_af83d3657f5acf5e51e4d34d18536502f}\index{moveCalculation.c@{moveCalculation.c}!bishopMovesWithSideSelection@{bishopMovesWithSideSelection}}
+Just a middle function when I want to calculate moves in preprocessing where it is always the opposite color of gamestate. Calls the real anti\+Diagonal\+Slide function (\+\_\+\+\_\+anti\+Diagonal\+Slide).
+
+
+\begin{DoxyParams}{Parameters}
+{\em gamestate} & gamestate struct representing the current gamestate \\
+\hline
+{\em position} & the position of the attacking piece (0 = H1, 7=A1, 63=A8)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: bitboard representing all attacks the piece can make in the anti diagonal direction
+\end{DoxyReturn}
+OPTIMIZATION\+: instead of calculating the possible moves based on the diagonal/anti diagonal, I could have a lookup table. bitboard representing all attacks the piece can make in diagonal direction \Hypertarget{move_calculation_8c_af83d3657f5acf5e51e4d34d18536502f}\index{moveCalculation.c@{moveCalculation.c}!bishopMovesWithSideSelection@{bishopMovesWithSideSelection}}
 \index{bishopMovesWithSideSelection@{bishopMovesWithSideSelection}!moveCalculation.c@{moveCalculation.c}}
 \doxysubsubsection{\texorpdfstring{bishopMovesWithSideSelection()}{bishopMovesWithSideSelection()}}
 {\footnotesize\ttfamily \label{move_calculation_8c_af83d3657f5acf5e51e4d34d18536502f} 
@@ -239,18 +195,61 @@ check if a queen castle can be done
 \begin{DoxyReturn}{Returns}
 \+: true if queen castle is possible, else false 
 \end{DoxyReturn}
-\Hypertarget{move_calculation_8c_a0b0952353b9938e6ca93ee52eea619bb}\index{moveCalculation.c@{moveCalculation.c}!diagonalSlide@{diagonalSlide}}
+\Hypertarget{move_calculation_8c_a5a42e210c7a2d227fdd59a3d04683182}\index{moveCalculation.c@{moveCalculation.c}!createPossibleMovesAfterCheck@{createPossibleMovesAfterCheck}}
+\index{createPossibleMovesAfterCheck@{createPossibleMovesAfterCheck}!moveCalculation.c@{moveCalculation.c}}
+\doxysubsubsection{\texorpdfstring{createPossibleMovesAfterCheck()}{createPossibleMovesAfterCheck()}}
+{\footnotesize\ttfamily \label{move_calculation_8c_a5a42e210c7a2d227fdd59a3d04683182} 
+uint64\+\_\+t create\+Possible\+Moves\+After\+Check (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}}]{gamestate}{, }\item[{const \mbox{\hyperlink{struct_position}{Position}} \texorpdfstring{$\ast$}{*}}]{king\+Position}{, }\item[{const bool}]{for\+White\+Piece}{}\end{DoxyParamCaption})}
+
+makes a move and checks if the move is legal, by seeing if the king is under attack afterwards. this is only filling a new gamestate with the most essential values to check.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gamestate} & the gamestate to check \\
+\hline
+{\em piece} & the piece that made the move \\
+\hline
+{\em piece\+Position} & the starting position of the piece \\
+\hline
+{\em move\+Position} & the end position of the piece\\
+\hline
+\end{DoxyParams}
+return\+: true if the move is legal, otherwise false \Hypertarget{move_calculation_8c_a0b0952353b9938e6ca93ee52eea619bb}\index{moveCalculation.c@{moveCalculation.c}!diagonalSlide@{diagonalSlide}}
 \index{diagonalSlide@{diagonalSlide}!moveCalculation.c@{moveCalculation.c}}
 \doxysubsubsection{\texorpdfstring{diagonalSlide()}{diagonalSlide()}}
 {\footnotesize\ttfamily \label{move_calculation_8c_a0b0952353b9938e6ca93ee52eea619bb} 
 static uint64\+\_\+t diagonal\+Slide (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}}]{gamestate}{, }\item[{const short}]{position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
+Just a middle function when I want to calculate moves in preprocessing where it is always the opposite color of gamestate. Calls the real anti\+Diagonal\+Slide function (\+\_\+\+\_\+anti\+Diagonal\+Slide).
+
+
+\begin{DoxyParams}{Parameters}
+{\em gamestate} & gamestate struct representing the current gamestate \\
+\hline
+{\em position} & the position of the attacking piece (0 = H1, 7=A1, 63=A8)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: bitboard representing all attacks the piece can make in diagonal direction 
+\end{DoxyReturn}
 \Hypertarget{move_calculation_8c_a006f40805f5acd5257736b71804d64f0}\index{moveCalculation.c@{moveCalculation.c}!horizontalSlide@{horizontalSlide}}
 \index{horizontalSlide@{horizontalSlide}!moveCalculation.c@{moveCalculation.c}}
 \doxysubsubsection{\texorpdfstring{horizontalSlide()}{horizontalSlide()}}
 {\footnotesize\ttfamily \label{move_calculation_8c_a006f40805f5acd5257736b71804d64f0} 
 static uint64\+\_\+t horizontal\+Slide (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}}]{gamestate}{, }\item[{const short}]{position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
+Just a middle function when I want to calculate moves in preprocessing where it is always the opposite color of gamestate. Calls the real horizontal\+Slide function (\+\_\+\+\_\+horizontal\+Slide).
+
+
+\begin{DoxyParams}{Parameters}
+{\em gamestate} & gamestate struct representing the current gamestate \\
+\hline
+{\em position} & the position of the attacking piece (0 = H1, 7=A1, 63=A8)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: bitboard representing all attacks the piece can make in horizontal direction 
+\end{DoxyReturn}
 \Hypertarget{move_calculation_8c_a4f81e011575e16adc40f0c063c77e15e}\index{moveCalculation.c@{moveCalculation.c}!kingMovesWithSideSelection@{kingMovesWithSideSelection}}
 \index{kingMovesWithSideSelection@{kingMovesWithSideSelection}!moveCalculation.c@{moveCalculation.c}}
 \doxysubsubsection{\texorpdfstring{kingMovesWithSideSelection()}{kingMovesWithSideSelection()}}
@@ -400,3 +399,15 @@ also saves the bitboards into config of the gamestate
 {\footnotesize\ttfamily \label{move_calculation_8c_a7a965a1f303b79d6720108c2c47209ae} 
 static uint64\+\_\+t vertical\+Slide (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}}]{gamestate}{, }\item[{const short}]{position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
+Just a middle function when I want to calculate moves in preprocessing where it is always the opposite color of gamestate. Calls the real vertical\+Slide function (\+\_\+\+\_\+vertical\+Slide).
+
+
+\begin{DoxyParams}{Parameters}
+{\em gamestate} & gamestate struct representing the current gamestate \\
+\hline
+{\em position} & the position of the attacking piece (0 = H1, 7=A1, 63=A8)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: bitboard representing all attacks the piece can make in vertical direction 
+\end{DoxyReturn}

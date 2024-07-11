@@ -58,8 +58,11 @@ initializes all variables of the struct
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-\+: the initialized \doxylink{struct_move_generation_thread_pool}{Move\+Generation\+Thread\+Pool} pointer 
+\+: the initialized \doxylink{struct_move_generation_thread_pool}{Move\+Generation\+Thread\+Pool} pointer
 \end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+ERROR\+\_\+\+MEMORY\+\_\+\+MALLOC\+\_\+\+FAILED\+: if malloc failed 
+\end{DoxyWarning}
 \Hypertarget{preprocessing_8h_abc3ab4dc9bf7d7b76ab9c84472d05cf8}\index{preprocessing.h@{preprocessing.h}!preprocessing\_start@{preprocessing\_start}}
 \index{preprocessing\_start@{preprocessing\_start}!preprocessing.h@{preprocessing.h}}
 \doxysubsubsection{\texorpdfstring{preprocessing\_start()}{preprocessing\_start()}}
@@ -72,6 +75,9 @@ function representing the work a \doxylink{struct_move_generation_thread_pool}{M
 \begin{DoxyParams}{Parameters}
 {\em args} & command args struct pointer with configuration \\
 \hline
-{\em gamestate} & the starting gamestate \\
+{\em gamestate} & the starting gamestate\\
 \hline
 \end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+ERROR\+\_\+\+THREADS\+\_\+\+TIMEOUT\+: if a thread surpasses the max work time defined by MAX\+\_\+\+WAIT\+\_\+\+TIME 
+\end{DoxyWarning}

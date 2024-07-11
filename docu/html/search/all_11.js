@@ -12,10 +12,11 @@ var searchData=
   ['rankbitboards_9',['RankBitboards',['../struct_rank_bitboards.html',1,'']]],
   ['rankbitboards_10',['rankBitboards',['../bitboards_8c.html#a9d82f0ee6b1690ca961bffb4de986994',1,'rankBitboards:&#160;bitboards.c'],['../bitboards_8h.html#a9d82f0ee6b1690ca961bffb4de986994',1,'rankBitboards:&#160;bitboards.c']]],
   ['rear_11',['rear',['../struct_queue.html#a8303807ce298d63d958f7e5765034d70',1,'Queue']]],
-  ['reversebitboard_12',['reverseBitboard',['../utility_8c.html#ae6a10284270912f55cb7604364e245fc',1,'reverseBitboard(uint64_t bitboard):&#160;utility.c'],['../utility_8h.html#ae6a10284270912f55cb7604364e245fc',1,'reverseBitboard(uint64_t bitboard):&#160;utility.c']]],
+  ['reversebitboard_12',['reverseBitboard',['../utility_8c.html#a194367b51887d5d4350878974f891805',1,'reverseBitboard(const uint64_t bitboard):&#160;utility.c'],['../utility_8h.html#a194367b51887d5d4350878974f891805',1,'reverseBitboard(const uint64_t bitboard):&#160;utility.c']]],
   ['reverseboards_13',['reverseBoards',['../struct_file_bitboards.html#a7e72dc11db4c579f393041c0e53ce972',1,'FileBitboards::reverseBoards'],['../struct_rank_bitboards.html#a0517428c81835f8aed04478f3494f892',1,'RankBitboards::reverseBoards']]],
   ['rook_14',['ROOK',['../move_8h.html#a30867d32ae0c776ddd66b07a2f4d930da49b75ad9a5137e805c60f32ed9cc2820',1,'move.h']]],
   ['rook_15',['rook',['../struct_bitboards.html#a3309f66180473e7ce841716b123d0ca3',1,'Bitboards']]],
-  ['rookmoveswithsideselection_16',['rookMovesWithSideSelection',['../move_calculation_8c.html#a5493f89cd8743d1f3cd77a2cf2e2b2f4',1,'rookMovesWithSideSelection(const Gamestate *gamestate, const Position *position, const bool forWhitePiece):&#160;moveCalculation.c'],['../move_calculation_8h.html#a5493f89cd8743d1f3cd77a2cf2e2b2f4',1,'rookMovesWithSideSelection(const Gamestate *gamestate, const Position *position, const bool forWhitePiece):&#160;moveCalculation.c']]],
-  ['rookvalue_17',['ROOKVALUE',['../evaluation_8h.html#a2f3856c4d24d6e2d00579d01b15dd1b0',1,'evaluation.h']]]
+  ['rookmoves_16',['rookMoves',['../move_calculation_8h.html#a35a354ab8260f532418a803006a85d83',1,'moveCalculation.h']]],
+  ['rookmoveswithsideselection_17',['rookMovesWithSideSelection',['../move_calculation_8c.html#a5493f89cd8743d1f3cd77a2cf2e2b2f4',1,'rookMovesWithSideSelection(const Gamestate *gamestate, const Position *position, const bool forWhitePiece):&#160;moveCalculation.c'],['../move_calculation_8h.html#a5493f89cd8743d1f3cd77a2cf2e2b2f4',1,'rookMovesWithSideSelection(const Gamestate *gamestate, const Position *position, const bool forWhitePiece):&#160;moveCalculation.c']]],
+  ['rookvalue_18',['ROOKVALUE',['../evaluation_8h.html#a2f3856c4d24d6e2d00579d01b15dd1b0',1,'evaluation.h']]]
 ];

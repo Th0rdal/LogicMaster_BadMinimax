@@ -170,7 +170,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>: the initialized <a class="el" href="struct_move_generation_thread_pool.html">MoveGenerationThreadPool</a> pointer </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>: the initialized <a class="el" href="struct_move_generation_thread_pool.html">MoveGenerationThreadPool</a> pointer</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>ERROR_MEMORY_MALLOC_FAILED: if malloc failed </dd></dl>
 
 </div>
 </div>
@@ -196,10 +197,11 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">args</td><td>command args struct pointer with configuration </td></tr>
-    <tr><td class="paramname">gamestate</td><td>the starting gamestate </td></tr>
+    <tr><td class="paramname">gamestate</td><td>the starting gamestate</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section warning"><dt>Warning</dt><dd>ERROR_THREADS_TIMEOUT: if a thread surpasses the max work time defined by MAX_WAIT_TIME </dd></dl>
 
 </div>
 </div>

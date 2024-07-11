@@ -14,5 +14,5 @@ var searchData=
   ['stack_2eh_11',['stack.h',['../stack_8h.html',1,'']]],
   ['stack_5fresize_12',['STACK_RESIZE',['../config_8h.html#ab17aa13d9e6295ed0496a7d2160764cc',1,'config.h']]],
   ['startposition_13',['startPosition',['../struct_move.html#aac0b35534f7ba60ee08090099ae5ed78',1,'Move']]],
-  ['state_14',['state',['../struct_evaluation_data.html#ae0562d3e0833896c508bc646d05f61f6',1,'EvaluationData::state'],['../stack_8h.html#a275f5633395aa71f87a24f33d5686d5e',1,'state:&#160;stack.h']]]
+  ['state_14',['state',['../struct_evaluation_data.html#ae0562d3e0833896c508bc646d05f61f6',1,'EvaluationData']]]
 ];

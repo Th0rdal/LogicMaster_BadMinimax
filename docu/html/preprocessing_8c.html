@@ -101,18 +101,20 @@ Functions</h2></td></tr>
 <tr class="separator:a2d1c5541242b91b44df469d0eb4d52af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73f2fdfe918ec35bd21b1b82d53b9cb3" id="r_a73f2fdfe918ec35bd21b1b82d53b9cb3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73f2fdfe918ec35bd21b1b82d53b9cb3">destroyGenerationThreadPool</a> (<a class="el" href="struct_move_generation_thread_pool.html">MoveGenerationThreadPool</a> *pool)</td></tr>
 <tr class="separator:a73f2fdfe918ec35bd21b1b82d53b9cb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c8313d05785802938c6d8a2a7fa3e09" id="r_a8c8313d05785802938c6d8a2a7fa3e09"><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c8313d05785802938c6d8a2a7fa3e09">__attribute__</a> ((always_inline))</td></tr>
-<tr class="separator:a8c8313d05785802938c6d8a2a7fa3e09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a571336fe77c98dea69bd7301809d85d1" id="r_a571336fe77c98dea69bd7301809d85d1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a571336fe77c98dea69bd7301809d85d1">calculateMoves</a> (<a class="el" href="struct_gamestate.html">Gamestate</a> *gamestate, <a class="el" href="struct_queue.html">Queue</a> *queue, <a class="el" href="struct_gamestate_tree_node.html">GamestateTreeNode</a> *<a class="el" href="stack_8h.html#af5ef8329d9a89f522542bae387e68c06">node</a>)</td></tr>
+<tr class="memitem:a1f7f2ff353c85eca867ccbe06138f635" id="r_a1f7f2ff353c85eca867ccbe06138f635"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f7f2ff353c85eca867ccbe06138f635">addToQueue</a> (<a class="el" href="struct_gamestate.html">Gamestate</a> *newGamestate, <a class="el" href="struct_gamestate_tree_node.html">GamestateTreeNode</a> *node, <a class="el" href="struct_queue.html">Queue</a> *queue, int *movesAddedToQueue)</td></tr>
+<tr class="separator:a1f7f2ff353c85eca867ccbe06138f635"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a571336fe77c98dea69bd7301809d85d1" id="r_a571336fe77c98dea69bd7301809d85d1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a571336fe77c98dea69bd7301809d85d1">calculateMoves</a> (<a class="el" href="struct_gamestate.html">Gamestate</a> *gamestate, <a class="el" href="struct_queue.html">Queue</a> *queue, <a class="el" href="struct_gamestate_tree_node.html">GamestateTreeNode</a> *node)</td></tr>
 <tr class="separator:a571336fe77c98dea69bd7301809d85d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a94880b8e41c6f069c4f827482a0a22" id="r_a4a94880b8e41c6f069c4f827482a0a22"><td class="memItemLeft" align="right" valign="top">DWORD WINAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a94880b8e41c6f069c4f827482a0a22">generationWorker</a> (LPVOID lpParam)</td></tr>
+<tr class="separator:a4a94880b8e41c6f069c4f827482a0a22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc3ab4dc9bf7d7b76ab9c84472d05cf8" id="r_abc3ab4dc9bf7d7b76ab9c84472d05cf8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc3ab4dc9bf7d7b76ab9c84472d05cf8">preprocessing_start</a> (<a class="el" href="structcommand__args.html">command_args</a> *args, <a class="el" href="struct_gamestate.html">Gamestate</a> *gamestate)</td></tr>
 <tr class="separator:abc3ab4dc9bf7d7b76ab9c84472d05cf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a441abee92b3d504e4e0daa6bb89a6cb6" id="r_a441abee92b3d504e4e0daa6bb89a6cb6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_move_generation_thread_pool.html">MoveGenerationThreadPool</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a441abee92b3d504e4e0daa6bb89a6cb6">moveGenerationThreadPoolInit</a> (<a class="el" href="structcommand__args.html">command_args</a> *args)</td></tr>
 <tr class="separator:a441abee92b3d504e4e0daa6bb89a6cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a8c8313d05785802938c6d8a2a7fa3e09" name="a8c8313d05785802938c6d8a2a7fa3e09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c8313d05785802938c6d8a2a7fa3e09">&#9670;&#160;</a></span>__attribute__()</h2>
+<a id="a1f7f2ff353c85eca867ccbe06138f635" name="a1f7f2ff353c85eca867ccbe06138f635"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f7f2ff353c85eca867ccbe06138f635">&#9670;&#160;</a></span>addToQueue()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -121,15 +123,29 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static __attribute__ </td>
+          <td class="memname">static void addToQueue </td>
           <td>(</td>
-          <td class="paramtype">(always_inline)</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_gamestate.html">Gamestate</a> *</td>          <td class="paramname"><span class="paramname"><em>newGamestate</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="struct_gamestate_tree_node.html">GamestateTreeNode</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_queue.html">Queue</a> *</td>          <td class="paramname"><span class="paramname"><em>queue</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>movesAddedToQueue</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -205,6 +221,30 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a4a94880b8e41c6f069c4f827482a0a22" name="a4a94880b8e41c6f069c4f827482a0a22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a94880b8e41c6f069c4f827482a0a22">&#9670;&#160;</a></span>generationWorker()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DWORD WINAPI generationWorker </td>
+          <td>(</td>
+          <td class="paramtype">LPVOID</td>          <td class="paramname"><span class="paramname"><em>lpParam</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The function an generation worker thread executes to generate all possible moves For move generation it uses an internal function called calcuolateMoves</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lpParam</td><td>The <a class="el" href="struct_move_generation_thread_pool.html">MoveGenerationThreadPool</a> with all needed variables set </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a441abee92b3d504e4e0daa6bb89a6cb6" name="a441abee92b3d504e4e0daa6bb89a6cb6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a441abee92b3d504e4e0daa6bb89a6cb6">&#9670;&#160;</a></span>moveGenerationThreadPoolInit()</h2>
 
@@ -226,7 +266,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>: the initialized <a class="el" href="struct_move_generation_thread_pool.html">MoveGenerationThreadPool</a> pointer </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>: the initialized <a class="el" href="struct_move_generation_thread_pool.html">MoveGenerationThreadPool</a> pointer</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>ERROR_MEMORY_MALLOC_FAILED: if malloc failed </dd></dl>
 
 </div>
 </div>
@@ -252,10 +293,11 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">args</td><td>command args struct pointer with configuration </td></tr>
-    <tr><td class="paramname">gamestate</td><td>the starting gamestate </td></tr>
+    <tr><td class="paramname">gamestate</td><td>the starting gamestate</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section warning"><dt>Warning</dt><dd>ERROR_THREADS_TIMEOUT: if a thread surpasses the max work time defined by MAX_WAIT_TIME </dd></dl>
 
 </div>
 </div>

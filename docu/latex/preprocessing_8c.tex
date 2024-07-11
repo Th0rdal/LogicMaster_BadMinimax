@@ -8,9 +8,11 @@ static void \mbox{\hyperlink{preprocessing_8c_a2d1c5541242b91b44df469d0eb4d52af}
 \item 
 static void \mbox{\hyperlink{preprocessing_8c_a73f2fdfe918ec35bd21b1b82d53b9cb3}{destroy\+Generation\+Thread\+Pool}} (\mbox{\hyperlink{struct_move_generation_thread_pool}{Move\+Generation\+Thread\+Pool}} \texorpdfstring{$\ast$}{*}pool)
 \item 
-static \mbox{\hyperlink{preprocessing_8c_a8c8313d05785802938c6d8a2a7fa3e09}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}} ((always\+\_\+inline))
+static void \mbox{\hyperlink{preprocessing_8c_a1f7f2ff353c85eca867ccbe06138f635}{add\+To\+Queue}} (\mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}new\+Gamestate, \mbox{\hyperlink{struct_gamestate_tree_node}{Gamestate\+Tree\+Node}} \texorpdfstring{$\ast$}{*}node, \mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*}queue, int \texorpdfstring{$\ast$}{*}moves\+Added\+To\+Queue)
 \item 
-int \mbox{\hyperlink{preprocessing_8c_a571336fe77c98dea69bd7301809d85d1}{calculate\+Moves}} (\mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, \mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*}queue, \mbox{\hyperlink{struct_gamestate_tree_node}{Gamestate\+Tree\+Node}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{stack_8h_af5ef8329d9a89f522542bae387e68c06}{node}})
+int \mbox{\hyperlink{preprocessing_8c_a571336fe77c98dea69bd7301809d85d1}{calculate\+Moves}} (\mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, \mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*}queue, \mbox{\hyperlink{struct_gamestate_tree_node}{Gamestate\+Tree\+Node}} \texorpdfstring{$\ast$}{*}node)
+\item 
+DWORD WINAPI \mbox{\hyperlink{preprocessing_8c_a4a94880b8e41c6f069c4f827482a0a22}{generation\+Worker}} (LPVOID lp\+Param)
 \item 
 void \mbox{\hyperlink{preprocessing_8c_abc3ab4dc9bf7d7b76ab9c84472d05cf8}{preprocessing\+\_\+start}} (\mbox{\hyperlink{structcommand__args}{command\+\_\+args}} \texorpdfstring{$\ast$}{*}args, \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate)
 \item 
@@ -19,11 +21,11 @@ void \mbox{\hyperlink{preprocessing_8c_abc3ab4dc9bf7d7b76ab9c84472d05cf8}{prepro
 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{preprocessing_8c_a8c8313d05785802938c6d8a2a7fa3e09}\index{preprocessing.c@{preprocessing.c}!\_\_attribute\_\_@{\_\_attribute\_\_}}
-\index{\_\_attribute\_\_@{\_\_attribute\_\_}!preprocessing.c@{preprocessing.c}}
-\doxysubsubsection{\texorpdfstring{\_\_attribute\_\_()}{\_\_attribute\_\_()}}
-{\footnotesize\ttfamily \label{preprocessing_8c_a8c8313d05785802938c6d8a2a7fa3e09} 
-static \+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(always\+\_\+inline)}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\Hypertarget{preprocessing_8c_a1f7f2ff353c85eca867ccbe06138f635}\index{preprocessing.c@{preprocessing.c}!addToQueue@{addToQueue}}
+\index{addToQueue@{addToQueue}!preprocessing.c@{preprocessing.c}}
+\doxysubsubsection{\texorpdfstring{addToQueue()}{addToQueue()}}
+{\footnotesize\ttfamily \label{preprocessing_8c_a1f7f2ff353c85eca867ccbe06138f635} 
+static void add\+To\+Queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}}]{new\+Gamestate}{, }\item[{\mbox{\hyperlink{struct_gamestate_tree_node}{Gamestate\+Tree\+Node}} \texorpdfstring{$\ast$}{*}}]{node}{, }\item[{\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*}}]{queue}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{moves\+Added\+To\+Queue}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
 handles everything needed to add a new gamestate to the work queue. Supposed to be inlined at location \Hypertarget{preprocessing_8c_a571336fe77c98dea69bd7301809d85d1}\index{preprocessing.c@{preprocessing.c}!calculateMoves@{calculateMoves}}
 \index{calculateMoves@{calculateMoves}!preprocessing.c@{preprocessing.c}}
@@ -58,6 +60,19 @@ destroys the \doxylink{struct_move_generation_thread_pool}{Move\+Generation\+Thr
 {\em pool} & the struct to destroy \\
 \hline
 \end{DoxyParams}
+\Hypertarget{preprocessing_8c_a4a94880b8e41c6f069c4f827482a0a22}\index{preprocessing.c@{preprocessing.c}!generationWorker@{generationWorker}}
+\index{generationWorker@{generationWorker}!preprocessing.c@{preprocessing.c}}
+\doxysubsubsection{\texorpdfstring{generationWorker()}{generationWorker()}}
+{\footnotesize\ttfamily \label{preprocessing_8c_a4a94880b8e41c6f069c4f827482a0a22} 
+DWORD WINAPI generation\+Worker (\begin{DoxyParamCaption}\item[{LPVOID}]{lp\+Param}{}\end{DoxyParamCaption})}
+
+The function an generation worker thread executes to generate all possible moves For move generation it uses an internal function called calcuolate\+Moves
+
+
+\begin{DoxyParams}{Parameters}
+{\em lp\+Param} & The \doxylink{struct_move_generation_thread_pool}{Move\+Generation\+Thread\+Pool} with all needed variables set \\
+\hline
+\end{DoxyParams}
 \Hypertarget{preprocessing_8c_a441abee92b3d504e4e0daa6bb89a6cb6}\index{preprocessing.c@{preprocessing.c}!moveGenerationThreadPoolInit@{moveGenerationThreadPoolInit}}
 \index{moveGenerationThreadPoolInit@{moveGenerationThreadPoolInit}!preprocessing.c@{preprocessing.c}}
 \doxysubsubsection{\texorpdfstring{moveGenerationThreadPoolInit()}{moveGenerationThreadPoolInit()}}
@@ -72,8 +87,11 @@ initializes all variables of the struct
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-\+: the initialized \doxylink{struct_move_generation_thread_pool}{Move\+Generation\+Thread\+Pool} pointer 
+\+: the initialized \doxylink{struct_move_generation_thread_pool}{Move\+Generation\+Thread\+Pool} pointer
 \end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+ERROR\+\_\+\+MEMORY\+\_\+\+MALLOC\+\_\+\+FAILED\+: if malloc failed 
+\end{DoxyWarning}
 \Hypertarget{preprocessing_8c_abc3ab4dc9bf7d7b76ab9c84472d05cf8}\index{preprocessing.c@{preprocessing.c}!preprocessing\_start@{preprocessing\_start}}
 \index{preprocessing\_start@{preprocessing\_start}!preprocessing.c@{preprocessing.c}}
 \doxysubsubsection{\texorpdfstring{preprocessing\_start()}{preprocessing\_start()}}
@@ -86,9 +104,12 @@ function representing the work a \doxylink{struct_move_generation_thread_pool}{M
 \begin{DoxyParams}{Parameters}
 {\em args} & command args struct pointer with configuration \\
 \hline
-{\em gamestate} & the starting gamestate \\
+{\em gamestate} & the starting gamestate\\
 \hline
 \end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+ERROR\+\_\+\+THREADS\+\_\+\+TIMEOUT\+: if a thread surpasses the max work time defined by MAX\+\_\+\+WAIT\+\_\+\+TIME 
+\end{DoxyWarning}
 \Hypertarget{preprocessing_8c_a2d1c5541242b91b44df469d0eb4d52af}\index{preprocessing.c@{preprocessing.c}!updateWorkCounter@{updateWorkCounter}}
 \index{updateWorkCounter@{updateWorkCounter}!preprocessing.c@{preprocessing.c}}
 \doxysubsubsection{\texorpdfstring{updateWorkCounter()}{updateWorkCounter()}}

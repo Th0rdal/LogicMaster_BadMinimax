@@ -12,9 +12,7 @@
 \item 
 \mbox{\hyperlink{struct_gamestate_config}{Gamestate\+Config}} \mbox{\hyperlink{gamestate_8c_a4024816c25c902ccf44e893f2a2ac1ab}{gamestate\+Config\+Init}} ()
 \item 
-void \mbox{\hyperlink{gamestate_8c_a5c691c06488276a278904296974d20cd}{destroy\+Gamestate}} (\mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate)
-\item 
-bool \mbox{\hyperlink{gamestate_8c_aa5afc044760b48619c4c3a359c72734c}{gamestate\+Make\+Move\+Internal}} (\mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{gamestate_8h_ab482139e3bfcf1ad744a5f0a6793d24a}{new\+Gamestate}}, const enum \mbox{\hyperlink{move_8h_a30867d32ae0c776ddd66b07a2f4d930d}{PIECE}} piece, \mbox{\hyperlink{struct_position}{Position}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{gamestate_8h_a818ce1ed710aea0606d9f411008b51c9}{piece\+Position}}, \mbox{\hyperlink{struct_position}{Position}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{gamestate_8h_adad974fcef088bfdaf5af08162a25f31}{move\+Position}}, const enum \mbox{\hyperlink{move_8h_a30867d32ae0c776ddd66b07a2f4d930d}{PIECE}} promotion\+Piece)
+bool \mbox{\hyperlink{gamestate_8c_aa5afc044760b48619c4c3a359c72734c}{gamestate\+Make\+Move\+Internal}} (\mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate, \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}new\+Gamestate, const enum \mbox{\hyperlink{move_8h_a30867d32ae0c776ddd66b07a2f4d930d}{PIECE}} piece, \mbox{\hyperlink{struct_position}{Position}} \texorpdfstring{$\ast$}{*}piece\+Position, \mbox{\hyperlink{struct_position}{Position}} \texorpdfstring{$\ast$}{*}move\+Position, const enum \mbox{\hyperlink{move_8h_a30867d32ae0c776ddd66b07a2f4d930d}{PIECE}} promotion\+Piece)
 \end{DoxyCompactItemize}
 
 
@@ -30,19 +28,6 @@ creates and initializes a \doxylink{struct_counters}{Counters} struct. Initializ
 \begin{DoxyReturn}{Returns}
 \+: initialized \doxylink{struct_counters}{Counters} struct 
 \end{DoxyReturn}
-\Hypertarget{gamestate_8c_a5c691c06488276a278904296974d20cd}\index{gamestate.c@{gamestate.c}!destroyGamestate@{destroyGamestate}}
-\index{destroyGamestate@{destroyGamestate}!gamestate.c@{gamestate.c}}
-\doxysubsubsection{\texorpdfstring{destroyGamestate()}{destroyGamestate()}}
-{\footnotesize\ttfamily \label{gamestate_8c_a5c691c06488276a278904296974d20cd} 
-void destroy\+Gamestate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}}]{gamestate}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-destroys the given gamestate
-
-
-\begin{DoxyParams}{Parameters}
-{\em gamestate} & pointer to the gamestate to destroy \\
-\hline
-\end{DoxyParams}
 \Hypertarget{gamestate_8c_a4024816c25c902ccf44e893f2a2ac1ab}\index{gamestate.c@{gamestate.c}!gamestateConfigInit@{gamestateConfigInit}}
 \index{gamestateConfigInit@{gamestateConfigInit}!gamestate.c@{gamestate.c}}
 \doxysubsubsection{\texorpdfstring{gamestateConfigInit()}{gamestateConfigInit()}}
@@ -74,8 +59,11 @@ creates and initialzes a \doxylink{struct_gamestate_flags}{Gamestate\+Flags} str
 initializes all variables with values and returns an initialized gamestate. This should be the only way to get a new gamestate.
 
 \begin{DoxyReturn}{Returns}
-\+: \doxylink{struct_gamestate}{Gamestate} struct after initialization 
+\+: \doxylink{struct_gamestate}{Gamestate} struct after initialization
 \end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+ERROR\+\_\+\+MEMORY\+\_\+\+MALLOC\+\_\+\+FAILED\+: if malloc failed 
+\end{DoxyWarning}
 \Hypertarget{gamestate_8c_aa5afc044760b48619c4c3a359c72734c}\index{gamestate.c@{gamestate.c}!gamestateMakeMoveInternal@{gamestateMakeMoveInternal}}
 \index{gamestateMakeMoveInternal@{gamestateMakeMoveInternal}!gamestate.c@{gamestate.c}}
 \doxysubsubsection{\texorpdfstring{gamestateMakeMoveInternal()}{gamestateMakeMoveInternal()}}
@@ -100,5 +88,10 @@ makes a move on the boards and creates a new gamestate representing the made mov
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-\+: false if the move is illegal, else true 
+\+: false if the move is illegal, else true
 \end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+ERROR\+\_\+\+PROMOTION\+\_\+\+PIECE\+\_\+\+UNAVAILABLE\+: if the promotion flag is set and the promotion piece is not Rook, Knight, Bishop, Queen 
+
+ERROR\+\_\+\+PIECE\+\_\+\+NOT\+\_\+\+SELECTED\+: if piece is not defined/selected 
+\end{DoxyWarning}

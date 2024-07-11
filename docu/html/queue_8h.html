@@ -196,10 +196,17 @@ Variables</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">queue</td><td>the queue to add the gamestate to </td></tr>
-    <tr><td class="paramname">gamestate</td><td>the gamestate to add </td></tr>
+    <tr><td class="paramname">gamestate</td><td>the gamestate to add</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section warning"><dt>Warning</dt><dd>WARNING_QUEUE_TOO_SMALL: if the queue is too small </dd>
+<dd>
+WARNING_RESIZING_QUEUE: if the queue is resized </dd>
+<dd>
+ERROR_MALLOC_REALLOC_FAILED: if the realloc function failed </dd>
+<dd>
+ERROR_QUEUE_TOO_SMALL: if QUEUE_RESIZE is not defined and the queue is full </dd></dl>
 
 </div>
 </div>
@@ -220,10 +227,11 @@ Variables</h2></td></tr>
 <p>initializes the queue struct</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">maxDepth</td><td>a value that will be multiplied with QUEUE_SIZE_BASE to determine the queue size </td></tr>
+    <tr><td class="paramname">maxDepth</td><td>a value that will be multiplied with QUEUE_SIZE_BASE to determine the queue size</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section warning"><dt>Warning</dt><dd>ERROR_MEMORY_MALLOC_FAILED: if malloc fails </dd></dl>
 
 </div>
 </div>

@@ -8,16 +8,16 @@ static void \mbox{\hyperlink{converter_8c_a22325a9e53b44f47572e9a8d29a3b4e9}{get
 \item 
 static void \mbox{\hyperlink{converter_8c_ac43492814bd71f5cbd908594f4ccd667}{set\+Piece\+On\+Bitboard}} (const char fen\+Char, const uint64\+\_\+t value, \mbox{\hyperlink{struct_bitboards}{Bitboards}} \texorpdfstring{$\ast$}{*}bitboards)
 \item 
-void \mbox{\hyperlink{converter_8c_aecf8688e35c175b15309dc7b25f9d5ca}{fen\+To\+Bitboard}} (char \texorpdfstring{$\ast$}{*}fen, \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate)
+void \mbox{\hyperlink{converter_8c_aaaed8bdd2cae6d8fd0bde3c2fac467b2}{fen\+To\+Bitboard}} (const char \texorpdfstring{$\ast$}{*}fen, \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{converter_8c_aecf8688e35c175b15309dc7b25f9d5ca}\index{converter.c@{converter.c}!fenToBitboard@{fenToBitboard}}
+\Hypertarget{converter_8c_aaaed8bdd2cae6d8fd0bde3c2fac467b2}\index{converter.c@{converter.c}!fenToBitboard@{fenToBitboard}}
 \index{fenToBitboard@{fenToBitboard}!converter.c@{converter.c}}
 \doxysubsubsection{\texorpdfstring{fenToBitboard()}{fenToBitboard()}}
-{\footnotesize\ttfamily \label{converter_8c_aecf8688e35c175b15309dc7b25f9d5ca} 
-void fen\+To\+Bitboard (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{fen}{, }\item[{\mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}}]{gamestate}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{converter_8c_aaaed8bdd2cae6d8fd0bde3c2fac467b2} 
+void fen\+To\+Bitboard (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{fen}{, }\item[{\mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}}]{gamestate}{}\end{DoxyParamCaption})}
 
 Converts a fen notation char array into a bitboard struct and writes it into the bitboard struct Expects en Passant position in format a-\/h1-\/8 e.\+g., a5, e3
 
@@ -45,7 +45,10 @@ fetches the next part of the fen notation. This is marked by a space
 {\em part} & char array to save the result in\\
 \hline
 \end{DoxyParams}
-@exit ERROR\+\_\+\+FETCHING\+\_\+\+FEN\+\_\+\+PART\+: If after completing fetching, the next character is not a space \Hypertarget{converter_8c_ac43492814bd71f5cbd908594f4ccd667}\index{converter.c@{converter.c}!setPieceOnBitboard@{setPieceOnBitboard}}
+\begin{DoxyWarning}{Warning}
+ERROR\+\_\+\+FETCHING\+\_\+\+FEN\+\_\+\+PART\+: If after completing fetching, the next character is not a space 
+\end{DoxyWarning}
+\Hypertarget{converter_8c_ac43492814bd71f5cbd908594f4ccd667}\index{converter.c@{converter.c}!setPieceOnBitboard@{setPieceOnBitboard}}
 \index{setPieceOnBitboard@{setPieceOnBitboard}!converter.c@{converter.c}}
 \doxysubsubsection{\texorpdfstring{setPieceOnBitboard()}{setPieceOnBitboard()}}
 {\footnotesize\ttfamily \label{converter_8c_ac43492814bd71f5cbd908594f4ccd667} 
@@ -59,6 +62,9 @@ adds the value to the bitboard given by the fen\+Char
 \hline
 {\em value} & the uint64\+\_\+t value representing the square the piece is on \\
 \hline
-{\em bitboards} & Bitboard struct pointer representing the board \\
+{\em bitboards} & Bitboard struct pointer representing the board\\
 \hline
 \end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+ERROR\+\_\+\+FEN\+\_\+\+CHAR\+\_\+\+NOT\+\_\+\+DEFINED\+: if a char is given that does not correspond with a piecee 
+\end{DoxyWarning}

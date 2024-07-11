@@ -91,8 +91,7 @@ $(function(){ initResizable(false); });
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">stack.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -119,17 +118,18 @@ Typedefs</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a140fcde40e53666482cec550bb7f0904" id="r_a140fcde40e53666482cec550bb7f0904"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_evaluation_stack.html">EvaluationStack</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a140fcde40e53666482cec550bb7f0904">initializeStack</a> ()</td></tr>
 <tr class="separator:a140fcde40e53666482cec550bb7f0904"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ca56dc12418565fe21999fe3e9d5920" id="r_a7ca56dc12418565fe21999fe3e9d5920"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ca56dc12418565fe21999fe3e9d5920">__attribute__</a> ((always_inline)) inline bool isFull(const <a class="el" href="struct_evaluation_stack.html">EvaluationStack</a> *stack)</td></tr>
-<tr class="separator:a7ca56dc12418565fe21999fe3e9d5920"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a718c1bf5a3bf21ebb980203b142e5b75" id="r_a718c1bf5a3bf21ebb980203b142e5b75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_evaluation_data.html">EvaluationData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a718c1bf5a3bf21ebb980203b142e5b75">data</a></td></tr>
-<tr class="separator:a718c1bf5a3bf21ebb980203b142e5b75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a275f5633395aa71f87a24f33d5686d5e" id="r_a275f5633395aa71f87a24f33d5686d5e"><td class="memItemLeft" align="right" valign="top">const short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a275f5633395aa71f87a24f33d5686d5e">state</a></td></tr>
-<tr class="separator:a275f5633395aa71f87a24f33d5686d5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5ef8329d9a89f522542bae387e68c06" id="r_af5ef8329d9a89f522542bae387e68c06"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a718c1bf5a3bf21ebb980203b142e5b75">data</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5ef8329d9a89f522542bae387e68c06">node</a> = node</td></tr>
-<tr class="separator:af5ef8329d9a89f522542bae387e68c06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85d6273741cd91750e625724e75143f2" id="r_a85d6273741cd91750e625724e75143f2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85d6273741cd91750e625724e75143f2">isFull</a> (const <a class="el" href="struct_evaluation_stack.html">EvaluationStack</a> *stack)</td></tr>
+<tr class="separator:a85d6273741cd91750e625724e75143f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd3ee6feade937bce4ee19e3a47b5677" id="r_abd3ee6feade937bce4ee19e3a47b5677"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd3ee6feade937bce4ee19e3a47b5677">isEmpty</a> (const <a class="el" href="struct_evaluation_stack.html">EvaluationStack</a> *stack)</td></tr>
+<tr class="separator:abd3ee6feade937bce4ee19e3a47b5677"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a1dd4a63acab7270e10f7cc2e8f741a" id="r_a5a1dd4a63acab7270e10f7cc2e8f741a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a1dd4a63acab7270e10f7cc2e8f741a">pushEvaluationStack</a> (<a class="el" href="struct_evaluation_stack.html">EvaluationStack</a> *stack, <a class="el" href="struct_evaluation_data.html">EvaluationData</a> *data)</td></tr>
+<tr class="separator:a5a1dd4a63acab7270e10f7cc2e8f741a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9e546dbac0513b208000077e460e3fb" id="r_aa9e546dbac0513b208000077e460e3fb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_evaluation_data.html">EvaluationData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9e546dbac0513b208000077e460e3fb">popEvaluationStack</a> (<a class="el" href="struct_evaluation_stack.html">EvaluationStack</a> *stack)</td></tr>
+<tr class="separator:aa9e546dbac0513b208000077e460e3fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a106eaa8c416c349852a0a063e59dce0e" id="r_a106eaa8c416c349852a0a063e59dce0e"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="struct_evaluation_data.html">EvaluationData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a106eaa8c416c349852a0a063e59dce0e">peekEvaluationStack</a> (const <a class="el" href="struct_evaluation_stack.html">EvaluationStack</a> *stack)</td></tr>
+<tr class="separator:a106eaa8c416c349852a0a063e59dce0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac93f0d2a2861f02cf0d71d77be32768b" id="r_ac93f0d2a2861f02cf0d71d77be32768b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_evaluation_data.html">EvaluationData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac93f0d2a2861f02cf0d71d77be32768b">createEvaluationData</a> (<a class="el" href="struct_gamestate_tree_node.html">GamestateTreeNode</a> *node, const short state)</td></tr>
+<tr class="separator:ac93f0d2a2861f02cf0d71d77be32768b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a2335d6b57673dd8ca665c6e0c355e6c4" name="a2335d6b57673dd8ca665c6e0c355e6c4"></a>
@@ -143,6 +143,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>represents a piece of data that is put into the stack. The state is 1 if all children are already evaluated. </p>
 
 </div>
 </div>
@@ -157,67 +158,37 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>represents the evaluation stack. Contains max size, int element counter and the data itself </p>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a7ca56dc12418565fe21999fe3e9d5920" name="a7ca56dc12418565fe21999fe3e9d5920"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ca56dc12418565fe21999fe3e9d5920">&#9670;&#160;</a></span>__attribute__()</h2>
+<a id="ac93f0d2a2861f02cf0d71d77be32768b" name="ac93f0d2a2861f02cf0d71d77be32768b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac93f0d2a2861f02cf0d71d77be32768b">&#9670;&#160;</a></span>createEvaluationData()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">__attribute__ </td>
+          <td class="memname">static <a class="el" href="struct_evaluation_data.html">EvaluationData</a> * createEvaluationData </td>
           <td>(</td>
-          <td class="paramtype">(always_inline)</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype"><a class="el" href="struct_gamestate_tree_node.html">GamestateTreeNode</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const short</td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>checks if the stack is full</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">stack</td><td>pointer to the <a class="el" href="struct_evaluation_stack.html">EvaluationStack</a> to check</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>: true if the stack is full, else false</dd></dl>
-<p>check if the stack is empty</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">stack</td><td>pointer to the <a class="el" href="struct_evaluation_stack.html">EvaluationStack</a> to check</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>: true if the stack is empty, else false</dd></dl>
-<p>pushes a <a class="el" href="struct_evaluation_data.html">EvaluationData</a> struct onto the stack</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">stack</td><td>the stack to push the data on </td></tr>
-    <tr><td class="paramname">data</td><td>the data to push on the stack</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section warning"><dt>Warning</dt><dd>ERROR_STACK_OVERFLOW: if the stack is full</dd></dl>
-<p>pops the last element pushed onto the stack and returns it. It also deletes it from the stack</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">stack</td><td>the stack to pop from</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>: the last element pushed onto the stack as <a class="el" href="struct_evaluation_data.html">EvaluationData</a> pointer</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>ERROR_STACK_UNDERFLOW: if the stack is empty</dd></dl>
-<p>pooks at the last element pushed onto the stack and returns it.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">stack</td><td>the stack to pop from</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>: the last element pushed onto the stack as <a class="el" href="struct_evaluation_data.html">EvaluationData</a> pointer</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>ERROR_STACK_UNDERFLOW: if the stack is empty</dd></dl>
 <p>creates an <a class="el" href="struct_evaluation_data.html">EvaluationData</a> struct with the given data</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -257,72 +228,176 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="a718c1bf5a3bf21ebb980203b142e5b75" name="a718c1bf5a3bf21ebb980203b142e5b75"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a718c1bf5a3bf21ebb980203b142e5b75">&#9670;&#160;</a></span>data</h2>
+<a id="abd3ee6feade937bce4ee19e3a47b5677" name="abd3ee6feade937bce4ee19e3a47b5677"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd3ee6feade937bce4ee19e3a47b5677">&#9670;&#160;</a></span>isEmpty()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">return data</td>
+          <td class="memname">static bool isEmpty </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_evaluation_stack.html">EvaluationStack</a> *</td>          <td class="paramname"><span class="paramname"><em>stack</em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">{</div>
-<div class="line">    <span class="keywordflow">if</span> (isFull(stack)) {</div>
-<div class="line">        <a class="code hl_function" href="errors_8c.html#ad44c7208abc0c1b8927ca26524f9c509">throwWarning</a>(<a class="code hl_define" href="errors_8h.html#a5233b677b4adfbaa1e9ce2e0aa9dfe99">WARNING_STACK_TOO_SMALL</a>, <span class="stringliteral">&quot;Warning: The stack was too small&quot;</span>);</div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line">            <a class="code hl_function" href="errors_8c.html#a61467adf8701f6418141bf4c2b5e755e">throwError</a>(<a class="code hl_define" href="errors_8h.html#ac6d16c9702a78188654719d652c58e80">ERROR_CUSTOM_STACK_OVERFLOW</a>, <span class="stringliteral">&quot;Error: trying to push on a full EvaluationStack&quot;</span>);</div>
-<div class="line"> </div>
-<div class="line">    }</div>
-<div class="line">    stack-&gt;items[++(stack-&gt;top)] = <a class="code hl_variable" href="#a718c1bf5a3bf21ebb980203b142e5b75">data</a></div>
-<div class="ttc" id="aerrors_8c_html_a61467adf8701f6418141bf4c2b5e755e"><div class="ttname"><a href="errors_8c.html#a61467adf8701f6418141bf4c2b5e755e">throwError</a></div><div class="ttdeci">_Noreturn void throwError(int exitCode, char *format,...)</div><div class="ttdef"><b>Definition</b> errors.c:69</div></div>
-<div class="ttc" id="aerrors_8c_html_ad44c7208abc0c1b8927ca26524f9c509"><div class="ttname"><a href="errors_8c.html#ad44c7208abc0c1b8927ca26524f9c509">throwWarning</a></div><div class="ttdeci">void throwWarning(int warningCode, char *format,...)</div><div class="ttdef"><b>Definition</b> errors.c:80</div></div>
-<div class="ttc" id="aerrors_8h_html_a5233b677b4adfbaa1e9ce2e0aa9dfe99"><div class="ttname"><a href="errors_8h.html#a5233b677b4adfbaa1e9ce2e0aa9dfe99">WARNING_STACK_TOO_SMALL</a></div><div class="ttdeci">#define WARNING_STACK_TOO_SMALL</div><div class="ttdef"><b>Definition</b> errors.h:46</div></div>
-<div class="ttc" id="aerrors_8h_html_ac6d16c9702a78188654719d652c58e80"><div class="ttname"><a href="errors_8h.html#ac6d16c9702a78188654719d652c58e80">ERROR_CUSTOM_STACK_OVERFLOW</a></div><div class="ttdeci">#define ERROR_CUSTOM_STACK_OVERFLOW</div><div class="ttdef"><b>Definition</b> errors.h:18</div></div>
-<div class="ttc" id="astack_8h_html_a718c1bf5a3bf21ebb980203b142e5b75"><div class="ttname"><a href="#a718c1bf5a3bf21ebb980203b142e5b75">data</a></div><div class="ttdeci">EvaluationData * data</div><div class="ttdef"><b>Definition</b> stack.h:59</div></div>
-</div><!-- fragment -->
+<p>check if the stack is empty</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stack</td><td>pointer to the <a class="el" href="struct_evaluation_stack.html">EvaluationStack</a> to check</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: true if the stack is empty, else false </dd></dl>
+
 </div>
 </div>
-<a id="af5ef8329d9a89f522542bae387e68c06" name="af5ef8329d9a89f522542bae387e68c06"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5ef8329d9a89f522542bae387e68c06">&#9670;&#160;</a></span>node</h2>
+<a id="a85d6273741cd91750e625724e75143f2" name="a85d6273741cd91750e625724e75143f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85d6273741cd91750e625724e75143f2">&#9670;&#160;</a></span>isFull()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a718c1bf5a3bf21ebb980203b142e5b75">data</a> node = node</td>
+          <td class="memname">static bool isFull </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_evaluation_stack.html">EvaluationStack</a> *</td>          <td class="paramname"><span class="paramname"><em>stack</em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+<p>checks if the stack is full</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stack</td><td>pointer to the <a class="el" href="struct_evaluation_stack.html">EvaluationStack</a> to check</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: true if the stack is full, else false </dd></dl>
 
 </div>
 </div>
-<a id="a275f5633395aa71f87a24f33d5686d5e" name="a275f5633395aa71f87a24f33d5686d5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a275f5633395aa71f87a24f33d5686d5e">&#9670;&#160;</a></span>state</h2>
+<a id="a106eaa8c416c349852a0a063e59dce0e" name="a106eaa8c416c349852a0a063e59dce0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a106eaa8c416c349852a0a063e59dce0e">&#9670;&#160;</a></span>peekEvaluationStack()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a718c1bf5a3bf21ebb980203b142e5b75">data</a> state</td>
+          <td class="memname">static const <a class="el" href="struct_evaluation_data.html">EvaluationData</a> * peekEvaluationStack </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_evaluation_stack.html">EvaluationStack</a> *</td>          <td class="paramname"><span class="paramname"><em>stack</em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">{</div>
-<div class="line">    <a class="code hl_struct" href="struct_evaluation_data.html">EvaluationData</a>* <a class="code hl_variable" href="#a718c1bf5a3bf21ebb980203b142e5b75">data</a> = (<a class="code hl_struct" href="struct_evaluation_data.html">EvaluationData</a>*)malloc(<span class="keyword">sizeof</span>(<a class="code hl_struct" href="struct_evaluation_data.html">EvaluationData</a>))</div>
-<div class="ttc" id="astruct_evaluation_data_html"><div class="ttname"><a href="struct_evaluation_data.html">EvaluationData</a></div><div class="ttdef"><b>Definition</b> stack.h:7</div></div>
-</div><!-- fragment -->
+<p>pooks at the last element pushed onto the stack and returns it.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stack</td><td>the stack to pop from</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: the last element pushed onto the stack as <a class="el" href="struct_evaluation_data.html">EvaluationData</a> pointer</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>ERROR_STACK_UNDERFLOW: if the stack is empty </dd></dl>
+
+</div>
+</div>
+<a id="aa9e546dbac0513b208000077e460e3fb" name="aa9e546dbac0513b208000077e460e3fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9e546dbac0513b208000077e460e3fb">&#9670;&#160;</a></span>popEvaluationStack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="struct_evaluation_data.html">EvaluationData</a> * popEvaluationStack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_evaluation_stack.html">EvaluationStack</a> *</td>          <td class="paramname"><span class="paramname"><em>stack</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>pops the last element pushed onto the stack and returns it. It also deletes it from the stack</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stack</td><td>the stack to pop from</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: the last element pushed onto the stack as <a class="el" href="struct_evaluation_data.html">EvaluationData</a> pointer</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>ERROR_STACK_UNDERFLOW: if the stack is empty </dd></dl>
+
+</div>
+</div>
+<a id="a5a1dd4a63acab7270e10f7cc2e8f741a" name="a5a1dd4a63acab7270e10f7cc2e8f741a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a1dd4a63acab7270e10f7cc2e8f741a">&#9670;&#160;</a></span>pushEvaluationStack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void pushEvaluationStack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_evaluation_stack.html">EvaluationStack</a> *</td>          <td class="paramname"><span class="paramname"><em>stack</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_evaluation_data.html">EvaluationData</a> *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>pushes a <a class="el" href="struct_evaluation_data.html">EvaluationData</a> struct onto the stack</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stack</td><td>the stack to push the data on </td></tr>
+    <tr><td class="paramname">data</td><td>the data to push on the stack</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>ERROR_STACK_OVERFLOW: if the stack is full </dd></dl>
+
 </div>
 </div>
 </div><!-- contents -->

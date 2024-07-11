@@ -4,9 +4,9 @@
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{main_8c_adccfc510459a10df34702075fdd5d0e0}{preprocessing}} (\mbox{\hyperlink{structcommand__args}{command\+\_\+args}} \texorpdfstring{$\ast$}{*}args, \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate)
+static void \mbox{\hyperlink{main_8c_ab566cbccb5e5c8e940113f5b642ca098}{preprocessing}} (\mbox{\hyperlink{structcommand__args}{command\+\_\+args}} \texorpdfstring{$\ast$}{*}args, \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate)
 \item 
-void \mbox{\hyperlink{main_8c_ad117bb9b41aad9e6b4327af914cd6d33}{postprocessing}} (\mbox{\hyperlink{structcommand__args}{command\+\_\+args}} \texorpdfstring{$\ast$}{*}args, \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate)
+static void \mbox{\hyperlink{main_8c_a13c99a0069940c00d3aa09bddaf33200}{postprocessing}} (\mbox{\hyperlink{structcommand__args}{command\+\_\+args}} \texorpdfstring{$\ast$}{*}args, \mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}gamestate)
 \item 
 int \mbox{\hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
 \end{DoxyCompactItemize}
@@ -19,17 +19,35 @@ int \mbox{\hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc
 {\footnotesize\ttfamily \label{main_8c_a0ddf1224851353fc92bfbff6f499fa97} 
 int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
 
-\Hypertarget{main_8c_ad117bb9b41aad9e6b4327af914cd6d33}\index{main.c@{main.c}!postprocessing@{postprocessing}}
+main function handling everything
+
+\begin{DoxyWarning}{Warning}
+ERROR\+\_\+\+MEMORY\+\_\+\+MALLOC\+\_\+\+FAILED\+: if malloc failed 
+
+ERROR\+\_\+\+UNKNOWN\+\_\+\+ARGUMENT\+: if the command line argument is unknown 
+
+ERROR\+\_\+\+NOINPUT\+: if the command expects some input afterwards, but it is not given 
+\end{DoxyWarning}
+\Hypertarget{main_8c_a13c99a0069940c00d3aa09bddaf33200}\index{main.c@{main.c}!postprocessing@{postprocessing}}
 \index{postprocessing@{postprocessing}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{postprocessing()}{postprocessing()}}
-{\footnotesize\ttfamily \label{main_8c_ad117bb9b41aad9e6b4327af914cd6d33} 
-void postprocessing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcommand__args}{command\+\_\+args}} \texorpdfstring{$\ast$}{*}}]{args}{, }\item[{\mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}}]{gamestate}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{main_8c_a13c99a0069940c00d3aa09bddaf33200} 
+static void postprocessing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcommand__args}{command\+\_\+args}} \texorpdfstring{$\ast$}{*}}]{args}{, }\item[{\mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}}]{gamestate}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-\Hypertarget{main_8c_adccfc510459a10df34702075fdd5d0e0}\index{main.c@{main.c}!preprocessing@{preprocessing}}
+Converts the result gamestate into a format to be output
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & command line arguments passed in form of a pointer to \doxylink{structcommand__args}{command\+\_\+args} \\
+\hline
+{\em gamestate} & the result move gamestate \\
+\hline
+\end{DoxyParams}
+\Hypertarget{main_8c_ab566cbccb5e5c8e940113f5b642ca098}\index{main.c@{main.c}!preprocessing@{preprocessing}}
 \index{preprocessing@{preprocessing}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{preprocessing()}{preprocessing()}}
-{\footnotesize\ttfamily \label{main_8c_adccfc510459a10df34702075fdd5d0e0} 
-void preprocessing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcommand__args}{command\+\_\+args}} \texorpdfstring{$\ast$}{*}}]{args}{, }\item[{\mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}}]{gamestate}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{main_8c_ab566cbccb5e5c8e940113f5b642ca098} 
+static void preprocessing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcommand__args}{command\+\_\+args}} \texorpdfstring{$\ast$}{*}}]{args}{, }\item[{\mbox{\hyperlink{struct_gamestate}{Gamestate}} \texorpdfstring{$\ast$}{*}}]{gamestate}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 Brings input into a normed format (gamestate) before giving it to the algorithm
 
@@ -42,4 +60,6 @@ Brings input into a normed format (gamestate) before giving it to the algorithm
 {\em gamestate} & the gamestate to save the convertion in\\
 \hline
 \end{DoxyParams}
-@exit\+: NOINPUT\+: if the input enum is not set or not recognized 
+\begin{DoxyWarning}{Warning}
+\+: NOINPUT\+: if the input enum is not set or not recognized 
+\end{DoxyWarning}

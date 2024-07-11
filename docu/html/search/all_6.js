@@ -1,7 +1,7 @@
 var searchData=
 [
   ['fen_0',['FEN',['../config_8h.html#a292484485655112baf1f1f40d51ea6faac147929a0d4740f028e599eeabca7ec1',1,'config.h']]],
-  ['fentobitboard_1',['fenToBitboard',['../converter_8c.html#aecf8688e35c175b15309dc7b25f9d5ca',1,'fenToBitboard(char *fen, Gamestate *gamestate):&#160;converter.c'],['../converter_8h.html#aecf8688e35c175b15309dc7b25f9d5ca',1,'fenToBitboard(char *fen, Gamestate *gamestate):&#160;converter.c']]],
+  ['fentobitboard_1',['fenToBitboard',['../converter_8c.html#aaaed8bdd2cae6d8fd0bde3c2fac467b2',1,'fenToBitboard(const char *fen, Gamestate *gamestate):&#160;converter.c'],['../converter_8h.html#aaaed8bdd2cae6d8fd0bde3c2fac467b2',1,'fenToBitboard(const char *fen, Gamestate *gamestate):&#160;converter.c']]],
   ['file_2',['file',['../struct_position.html#a225605a3eea1cced001a40b5b73af001',1,'Position']]],
   ['filea_3',['fileA',['../struct_file_bitboards.html#ad77b8f954852a077827cc0b1a54036af',1,'FileBitboards::fileA'],['../bitboards_8c.html#a9a4848413e9221ef4d85f312fdac051d',1,'fileA:&#160;bitboards.c']]],
   ['fileb_4',['fileB',['../struct_file_bitboards.html#aaee7aab8414f8513c9d463a90e0ca78f',1,'FileBitboards']]],

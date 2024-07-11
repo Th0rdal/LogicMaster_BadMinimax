@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['data_0',['data',['../struct_queue.html#a9ce6063c598fe437e7b71232304581ac',1,'Queue::data'],['../stack_8h.html#a718c1bf5a3bf21ebb980203b142e5b75',1,'data:&#160;stack.h']]],
+  ['data_0',['data',['../struct_queue.html#a9ce6063c598fe437e7b71232304581ac',1,'Queue']]],
   ['debuggamestate_1',['debugGamestate',['../debugging_8c.html#ae9d1cf0e4873de79081966daf56fa4f7',1,'debugGamestate(Gamestate *gamestate):&#160;debugging.c'],['../debugging_8h.html#ae9d1cf0e4873de79081966daf56fa4f7',1,'debugGamestate(Gamestate *gamestate):&#160;debugging.c']]],
   ['debugging_2ec_2',['debugging.c',['../debugging_8c.html',1,'']]],
   ['debugging_2eh_3',['debugging.h',['../debugging_8h.html',1,'']]],
@@ -8,7 +8,7 @@ var searchData=
   ['dequeue_5',['dequeue',['../queue_8c.html#a4e0f475174ceb2036058f703992f2afb',1,'dequeue(Queue *queue):&#160;queue.c'],['../queue_8h.html#a4e0f475174ceb2036058f703992f2afb',1,'dequeue(Queue *queue):&#160;queue.c']]],
   ['dequeue_5fwait_5ftime_6',['DEQUEUE_WAIT_TIME',['../queue_8h.html#a03d855633a71dbe796c2bbc3d5edc54c',1,'queue.h']]],
   ['destroyevaluationthreadpool_7',['destroyEvaluationThreadPool',['../evaluation_8c.html#a6dcefefcc70cadf47909988dddf6022f',1,'destroyEvaluationThreadPool(EvaluationThreadPool *pool):&#160;evaluation.c'],['../evaluation_8h.html#a6dcefefcc70cadf47909988dddf6022f',1,'destroyEvaluationThreadPool(EvaluationThreadPool *pool):&#160;evaluation.c']]],
-  ['destroygamestate_8',['destroyGamestate',['../gamestate_8c.html#a5c691c06488276a278904296974d20cd',1,'destroyGamestate(Gamestate *gamestate):&#160;gamestate.c'],['../gamestate_8h.html#a5c691c06488276a278904296974d20cd',1,'destroyGamestate(Gamestate *gamestate):&#160;gamestate.c']]],
+  ['destroygamestate_8',['destroyGamestate',['../gamestate_8h.html#add56ec1ad2398c9915313f0b6870cbcf',1,'gamestate.h']]],
   ['destroygamestatetreebranchwithinside_9',['destroyGamestateTreeBranchWithInside',['../tree_8c.html#a863e64b7063d39e0bf258806d08a1745',1,'destroyGamestateTreeBranchWithInside(GamestateTreeBranch *branch):&#160;tree.c'],['../tree_8h.html#a863e64b7063d39e0bf258806d08a1745',1,'destroyGamestateTreeBranchWithInside(GamestateTreeBranch *branch):&#160;tree.c']]],
   ['destroygamestatetreenodewithinside_10',['destroyGamestateTreeNodeWithInside',['../tree_8c.html#a139616ff5f4d91944ca247abc4ee8db3',1,'destroyGamestateTreeNodeWithInside(GamestateTreeNode *node):&#160;tree.c'],['../tree_8h.html#a139616ff5f4d91944ca247abc4ee8db3',1,'destroyGamestateTreeNodeWithInside(GamestateTreeNode *node):&#160;tree.c']]],
   ['destroygenerationthreadpool_11',['destroyGenerationThreadPool',['../preprocessing_8c.html#a73f2fdfe918ec35bd21b1b82d53b9cb3',1,'preprocessing.c']]],

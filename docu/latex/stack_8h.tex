@@ -21,16 +21,17 @@ typedef struct Evaluation\+Stack \mbox{\hyperlink{stack_8h_aaa405e5c535ffb1d6e49
 \item 
 \mbox{\hyperlink{struct_evaluation_stack}{Evaluation\+Stack}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{stack_8h_a140fcde40e53666482cec550bb7f0904}{initialize\+Stack}} ()
 \item 
-\mbox{\hyperlink{stack_8h_a7ca56dc12418565fe21999fe3e9d5920}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}} ((always\+\_\+inline)) inline bool is\+Full(const \mbox{\hyperlink{struct_evaluation_stack}{Evaluation\+Stack}} \texorpdfstring{$\ast$}{*}stack)
-\end{DoxyCompactItemize}
-\doxysubsubsection*{Variables}
-\begin{DoxyCompactItemize}
+static bool \mbox{\hyperlink{stack_8h_a85d6273741cd91750e625724e75143f2}{is\+Full}} (const \mbox{\hyperlink{struct_evaluation_stack}{Evaluation\+Stack}} \texorpdfstring{$\ast$}{*}stack)
 \item 
-\mbox{\hyperlink{struct_evaluation_data}{Evaluation\+Data}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{stack_8h_a718c1bf5a3bf21ebb980203b142e5b75}{data}}
+static bool \mbox{\hyperlink{stack_8h_abd3ee6feade937bce4ee19e3a47b5677}{is\+Empty}} (const \mbox{\hyperlink{struct_evaluation_stack}{Evaluation\+Stack}} \texorpdfstring{$\ast$}{*}stack)
 \item 
-const short \mbox{\hyperlink{stack_8h_a275f5633395aa71f87a24f33d5686d5e}{state}}
+static void \mbox{\hyperlink{stack_8h_a5a1dd4a63acab7270e10f7cc2e8f741a}{push\+Evaluation\+Stack}} (\mbox{\hyperlink{struct_evaluation_stack}{Evaluation\+Stack}} \texorpdfstring{$\ast$}{*}stack, \mbox{\hyperlink{struct_evaluation_data}{Evaluation\+Data}} \texorpdfstring{$\ast$}{*}data)
 \item 
-\mbox{\hyperlink{stack_8h_a718c1bf5a3bf21ebb980203b142e5b75}{data}} \mbox{\hyperlink{stack_8h_af5ef8329d9a89f522542bae387e68c06}{node}} = node
+static \mbox{\hyperlink{struct_evaluation_data}{Evaluation\+Data}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{stack_8h_aa9e546dbac0513b208000077e460e3fb}{pop\+Evaluation\+Stack}} (\mbox{\hyperlink{struct_evaluation_stack}{Evaluation\+Stack}} \texorpdfstring{$\ast$}{*}stack)
+\item 
+static const \mbox{\hyperlink{struct_evaluation_data}{Evaluation\+Data}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{stack_8h_a106eaa8c416c349852a0a063e59dce0e}{peek\+Evaluation\+Stack}} (const \mbox{\hyperlink{struct_evaluation_stack}{Evaluation\+Stack}} \texorpdfstring{$\ast$}{*}stack)
+\item 
+static \mbox{\hyperlink{struct_evaluation_data}{Evaluation\+Data}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{stack_8h_ac93f0d2a2861f02cf0d71d77be32768b}{create\+Evaluation\+Data}} (\mbox{\hyperlink{struct_gamestate_tree_node}{Gamestate\+Tree\+Node}} \texorpdfstring{$\ast$}{*}node, const short state)
 \end{DoxyCompactItemize}
 
 
@@ -41,79 +42,21 @@ const short \mbox{\hyperlink{stack_8h_a275f5633395aa71f87a24f33d5686d5e}{state}}
 {\footnotesize\ttfamily \label{stack_8h_a2335d6b57673dd8ca665c6e0c355e6c4} 
 typedef struct Evaluation\+Data Evaluation\+Data}
 
-\Hypertarget{stack_8h_aaa405e5c535ffb1d6e497550dd51ede1}\index{stack.h@{stack.h}!EvaluationStack@{EvaluationStack}}
+represents a piece of data that is put into the stack. The state is 1 if all children are already evaluated. \Hypertarget{stack_8h_aaa405e5c535ffb1d6e497550dd51ede1}\index{stack.h@{stack.h}!EvaluationStack@{EvaluationStack}}
 \index{EvaluationStack@{EvaluationStack}!stack.h@{stack.h}}
 \doxysubsubsection{\texorpdfstring{EvaluationStack}{EvaluationStack}}
 {\footnotesize\ttfamily \label{stack_8h_aaa405e5c535ffb1d6e497550dd51ede1} 
 typedef struct Evaluation\+Stack Evaluation\+Stack}
 
-
+represents the evaluation stack. Contains max size, int element counter and the data itself 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{stack_8h_a7ca56dc12418565fe21999fe3e9d5920}\index{stack.h@{stack.h}!\_\_attribute\_\_@{\_\_attribute\_\_}}
-\index{\_\_attribute\_\_@{\_\_attribute\_\_}!stack.h@{stack.h}}
-\doxysubsubsection{\texorpdfstring{\_\_attribute\_\_()}{\_\_attribute\_\_()}}
-{\footnotesize\ttfamily \label{stack_8h_a7ca56dc12418565fe21999fe3e9d5920} 
-\+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(always\+\_\+inline)}]{}{}\end{DoxyParamCaption}) const}
+\Hypertarget{stack_8h_ac93f0d2a2861f02cf0d71d77be32768b}\index{stack.h@{stack.h}!createEvaluationData@{createEvaluationData}}
+\index{createEvaluationData@{createEvaluationData}!stack.h@{stack.h}}
+\doxysubsubsection{\texorpdfstring{createEvaluationData()}{createEvaluationData()}}
+{\footnotesize\ttfamily \label{stack_8h_ac93f0d2a2861f02cf0d71d77be32768b} 
+static \mbox{\hyperlink{struct_evaluation_data}{Evaluation\+Data}} \texorpdfstring{$\ast$}{*} create\+Evaluation\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_gamestate_tree_node}{Gamestate\+Tree\+Node}} \texorpdfstring{$\ast$}{*}}]{node}{, }\item[{const short}]{state}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
-checks if the stack is full
-
-
-\begin{DoxyParams}{Parameters}
-{\em stack} & pointer to the \doxylink{struct_evaluation_stack}{Evaluation\+Stack} to check\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-\+: true if the stack is full, else false
-\end{DoxyReturn}
-check if the stack is empty
-
-
-\begin{DoxyParams}{Parameters}
-{\em stack} & pointer to the \doxylink{struct_evaluation_stack}{Evaluation\+Stack} to check\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-\+: true if the stack is empty, else false
-\end{DoxyReturn}
-pushes a \doxylink{struct_evaluation_data}{Evaluation\+Data} struct onto the stack
-
-
-\begin{DoxyParams}{Parameters}
-{\em stack} & the stack to push the data on \\
-\hline
-{\em data} & the data to push on the stack\\
-\hline
-\end{DoxyParams}
-\begin{DoxyWarning}{Warning}
-ERROR\+\_\+\+STACK\+\_\+\+OVERFLOW\+: if the stack is full
-\end{DoxyWarning}
-pops the last element pushed onto the stack and returns it. It also deletes it from the stack
-
-
-\begin{DoxyParams}{Parameters}
-{\em stack} & the stack to pop from\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-\+: the last element pushed onto the stack as \doxylink{struct_evaluation_data}{Evaluation\+Data} pointer
-\end{DoxyReturn}
-\begin{DoxyWarning}{Warning}
-ERROR\+\_\+\+STACK\+\_\+\+UNDERFLOW\+: if the stack is empty
-\end{DoxyWarning}
-pooks at the last element pushed onto the stack and returns it.
-
-
-\begin{DoxyParams}{Parameters}
-{\em stack} & the stack to pop from\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-\+: the last element pushed onto the stack as \doxylink{struct_evaluation_data}{Evaluation\+Data} pointer
-\end{DoxyReturn}
-\begin{DoxyWarning}{Warning}
-ERROR\+\_\+\+STACK\+\_\+\+UNDERFLOW\+: if the stack is empty
-\end{DoxyWarning}
 creates an \doxylink{struct_evaluation_data}{Evaluation\+Data} struct with the given data
 
 
@@ -137,51 +80,91 @@ allocates memory and initializes the stack pointer
 \begin{DoxyReturn}{Returns}
 \+: pointer to the \doxylink{struct_evaluation_stack}{Evaluation\+Stack} struct 
 \end{DoxyReturn}
+\Hypertarget{stack_8h_abd3ee6feade937bce4ee19e3a47b5677}\index{stack.h@{stack.h}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!stack.h@{stack.h}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily \label{stack_8h_abd3ee6feade937bce4ee19e3a47b5677} 
+static bool is\+Empty (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_evaluation_stack}{Evaluation\+Stack}} \texorpdfstring{$\ast$}{*}}]{stack}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+check if the stack is empty
 
 
-\doxysubsection{Variable Documentation}
-\Hypertarget{stack_8h_a718c1bf5a3bf21ebb980203b142e5b75}\index{stack.h@{stack.h}!data@{data}}
-\index{data@{data}!stack.h@{stack.h}}
-\doxysubsubsection{\texorpdfstring{data}{data}}
-{\footnotesize\ttfamily \label{stack_8h_a718c1bf5a3bf21ebb980203b142e5b75} 
-return data}
+\begin{DoxyParams}{Parameters}
+{\em stack} & pointer to the \doxylink{struct_evaluation_stack}{Evaluation\+Stack} to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: true if the stack is empty, else false 
+\end{DoxyReturn}
+\Hypertarget{stack_8h_a85d6273741cd91750e625724e75143f2}\index{stack.h@{stack.h}!isFull@{isFull}}
+\index{isFull@{isFull}!stack.h@{stack.h}}
+\doxysubsubsection{\texorpdfstring{isFull()}{isFull()}}
+{\footnotesize\ttfamily \label{stack_8h_a85d6273741cd91750e625724e75143f2} 
+static bool is\+Full (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_evaluation_stack}{Evaluation\+Stack}} \texorpdfstring{$\ast$}{*}}]{stack}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
-{\bfseries Initial value\+:}
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\{}
-\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (isFull(stack))\ \{}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{errors_8c_ad44c7208abc0c1b8927ca26524f9c509}{throwWarning}}(\mbox{\hyperlink{errors_8h_a5233b677b4adfbaa1e9ce2e0aa9dfe99}{WARNING\_STACK\_TOO\_SMALL}},\ \textcolor{stringliteral}{"{}Warning:\ The\ stack\ was\ too\ small"{}});}
-\DoxyCodeLine{}
-\DoxyCodeLine{}
-\DoxyCodeLine{}
-\DoxyCodeLine{}
-\DoxyCodeLine{}
-\DoxyCodeLine{}
-\DoxyCodeLine{}
-\DoxyCodeLine{}
-\DoxyCodeLine{}
-\DoxyCodeLine{}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{errors_8c_a61467adf8701f6418141bf4c2b5e755e}{throwError}}(\mbox{\hyperlink{errors_8h_ac6d16c9702a78188654719d652c58e80}{ERROR\_CUSTOM\_STACK\_OVERFLOW}},\ \textcolor{stringliteral}{"{}Error:\ trying\ to\ push\ on\ a\ full\ EvaluationStack"{}});}
-\DoxyCodeLine{}
-\DoxyCodeLine{\ \ \ \ \}}
-\DoxyCodeLine{\ \ \ \ stack-\/>items[++(stack-\/>top)]\ =\ \mbox{\hyperlink{stack_8h_a718c1bf5a3bf21ebb980203b142e5b75}{data}}}
+checks if the stack is full
 
-\end{DoxyCode}
-\Hypertarget{stack_8h_af5ef8329d9a89f522542bae387e68c06}\index{stack.h@{stack.h}!node@{node}}
-\index{node@{node}!stack.h@{stack.h}}
-\doxysubsubsection{\texorpdfstring{node}{node}}
-{\footnotesize\ttfamily \label{stack_8h_af5ef8329d9a89f522542bae387e68c06} 
-\mbox{\hyperlink{stack_8h_a718c1bf5a3bf21ebb980203b142e5b75}{data}} node = node}
 
-\Hypertarget{stack_8h_a275f5633395aa71f87a24f33d5686d5e}\index{stack.h@{stack.h}!state@{state}}
-\index{state@{state}!stack.h@{stack.h}}
-\doxysubsubsection{\texorpdfstring{state}{state}}
-{\footnotesize\ttfamily \label{stack_8h_a275f5633395aa71f87a24f33d5686d5e} 
-\mbox{\hyperlink{stack_8h_a718c1bf5a3bf21ebb980203b142e5b75}{data}} state}
+\begin{DoxyParams}{Parameters}
+{\em stack} & pointer to the \doxylink{struct_evaluation_stack}{Evaluation\+Stack} to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: true if the stack is full, else false 
+\end{DoxyReturn}
+\Hypertarget{stack_8h_a106eaa8c416c349852a0a063e59dce0e}\index{stack.h@{stack.h}!peekEvaluationStack@{peekEvaluationStack}}
+\index{peekEvaluationStack@{peekEvaluationStack}!stack.h@{stack.h}}
+\doxysubsubsection{\texorpdfstring{peekEvaluationStack()}{peekEvaluationStack()}}
+{\footnotesize\ttfamily \label{stack_8h_a106eaa8c416c349852a0a063e59dce0e} 
+static const \mbox{\hyperlink{struct_evaluation_data}{Evaluation\+Data}} \texorpdfstring{$\ast$}{*} peek\+Evaluation\+Stack (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_evaluation_stack}{Evaluation\+Stack}} \texorpdfstring{$\ast$}{*}}]{stack}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
-{\bfseries Initial value\+:}
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\{}
-\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct_evaluation_data}{EvaluationData}}*\ \mbox{\hyperlink{stack_8h_a718c1bf5a3bf21ebb980203b142e5b75}{data}}\ =\ (\mbox{\hyperlink{struct_evaluation_data}{EvaluationData}}*)malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_evaluation_data}{EvaluationData}}))}
+pooks at the last element pushed onto the stack and returns it.
 
-\end{DoxyCode}
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & the stack to pop from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: the last element pushed onto the stack as \doxylink{struct_evaluation_data}{Evaluation\+Data} pointer
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+ERROR\+\_\+\+STACK\+\_\+\+UNDERFLOW\+: if the stack is empty 
+\end{DoxyWarning}
+\Hypertarget{stack_8h_aa9e546dbac0513b208000077e460e3fb}\index{stack.h@{stack.h}!popEvaluationStack@{popEvaluationStack}}
+\index{popEvaluationStack@{popEvaluationStack}!stack.h@{stack.h}}
+\doxysubsubsection{\texorpdfstring{popEvaluationStack()}{popEvaluationStack()}}
+{\footnotesize\ttfamily \label{stack_8h_aa9e546dbac0513b208000077e460e3fb} 
+static \mbox{\hyperlink{struct_evaluation_data}{Evaluation\+Data}} \texorpdfstring{$\ast$}{*} pop\+Evaluation\+Stack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_evaluation_stack}{Evaluation\+Stack}} \texorpdfstring{$\ast$}{*}}]{stack}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+pops the last element pushed onto the stack and returns it. It also deletes it from the stack
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & the stack to pop from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: the last element pushed onto the stack as \doxylink{struct_evaluation_data}{Evaluation\+Data} pointer
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+ERROR\+\_\+\+STACK\+\_\+\+UNDERFLOW\+: if the stack is empty 
+\end{DoxyWarning}
+\Hypertarget{stack_8h_a5a1dd4a63acab7270e10f7cc2e8f741a}\index{stack.h@{stack.h}!pushEvaluationStack@{pushEvaluationStack}}
+\index{pushEvaluationStack@{pushEvaluationStack}!stack.h@{stack.h}}
+\doxysubsubsection{\texorpdfstring{pushEvaluationStack()}{pushEvaluationStack()}}
+{\footnotesize\ttfamily \label{stack_8h_a5a1dd4a63acab7270e10f7cc2e8f741a} 
+static void push\+Evaluation\+Stack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_evaluation_stack}{Evaluation\+Stack}} \texorpdfstring{$\ast$}{*}}]{stack}{, }\item[{\mbox{\hyperlink{struct_evaluation_data}{Evaluation\+Data}} \texorpdfstring{$\ast$}{*}}]{data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+pushes a \doxylink{struct_evaluation_data}{Evaluation\+Data} struct onto the stack
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & the stack to push the data on \\
+\hline
+{\em data} & the data to push on the stack\\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+ERROR\+\_\+\+STACK\+\_\+\+OVERFLOW\+: if the stack is full 
+\end{DoxyWarning}

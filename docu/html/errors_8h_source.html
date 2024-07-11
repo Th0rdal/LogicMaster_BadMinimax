@@ -132,18 +132,19 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">// move generation</span></div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="errors_8h.html#aba8ebe18f86b7f7e98f3a9eb606cc614">   40</a></span><span class="preprocessor">#define ERROR_PIECE_NOT_SELECTED 120</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">// warning codes</span></div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="errors_8h.html#afd982677fff51473bdd3b2143d4c5541">   43</a></span><span class="preprocessor">#define WARNING_COULD_NOT_RETRIEVE_CORE_NUMBER 501 </span></div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="errors_8h.html#a78e6d84d00b431a93eafe2cdf4ea88e5">   44</a></span><span class="preprocessor">#define WARNING_QUEUE_TOO_SMALL 502</span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="errors_8h.html#a79b3d881ea521ee0bd501694e050e00f">   45</a></span><span class="preprocessor">#define WARNING_RESIZING_QUEUE 503</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="errors_8h.html#a5233b677b4adfbaa1e9ce2e0aa9dfe99">   46</a></span><span class="preprocessor">#define WARNING_STACK_TOO_SMALL 504</span></div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="errors_8h.html#adeaaba44fe12abe4f77a8ddec7599fbb">   47</a></span><span class="preprocessor">#define WARNING_RESIZING_STACK 505</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keywordtype">void</span> <a class="code hl_function" href="errors_8h.html#a02605c478875df486a1de7d24db32e3d">throwError</a>(<span class="keywordtype">int</span> errorCode, <span class="keywordtype">char</span>* format, ...);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keywordtype">void</span> <a class="code hl_function" href="errors_8h.html#ad44c7208abc0c1b8927ca26524f9c509">throwWarning</a>(<span class="keywordtype">int</span> warningCode, <span class="keywordtype">char</span>* format, ...);</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keywordtype">void</span> <a class="code hl_function" href="errors_8h.html#a02605c478875df486a1de7d24db32e3d">throwError</a>(<span class="keywordtype">int</span> errorCode, <span class="keywordtype">char</span>* format, ...);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keywordtype">void</span> <a class="code hl_function" href="errors_8h.html#ad44c7208abc0c1b8927ca26524f9c509">throwWarning</a>(<span class="keywordtype">int</span> warningCode, <span class="keywordtype">char</span>* format, ...);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
 <div class="ttc" id="aerrors_8h_html_a02605c478875df486a1de7d24db32e3d"><div class="ttname"><a href="errors_8h.html#a02605c478875df486a1de7d24db32e3d">throwError</a></div><div class="ttdeci">void throwError(int errorCode, char *format,...)</div><div class="ttdef"><b>Definition</b> errors.c:69</div></div>
 <div class="ttc" id="aerrors_8h_html_ad44c7208abc0c1b8927ca26524f9c509"><div class="ttname"><a href="errors_8h.html#ad44c7208abc0c1b8927ca26524f9c509">throwWarning</a></div><div class="ttdeci">void throwWarning(int warningCode, char *format,...)</div><div class="ttdef"><b>Definition</b> errors.c:80</div></div>
 </div><!-- fragment --></div><!-- contents -->

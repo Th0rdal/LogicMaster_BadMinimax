@@ -91,8 +91,7 @@ $(function(){ initResizable(false); });
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">gamestate.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -133,21 +132,12 @@ Functions</h2></td></tr>
 <tr class="separator:a757dc1b6e0a9402f497aec432e47d553"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4024816c25c902ccf44e893f2a2ac1ab" id="r_a4024816c25c902ccf44e893f2a2ac1ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_gamestate_config.html">GamestateConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4024816c25c902ccf44e893f2a2ac1ab">gamestateConfigInit</a> ()</td></tr>
 <tr class="separator:a4024816c25c902ccf44e893f2a2ac1ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c691c06488276a278904296974d20cd" id="r_a5c691c06488276a278904296974d20cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c691c06488276a278904296974d20cd">destroyGamestate</a> (<a class="el" href="struct_gamestate.html">Gamestate</a> *gamestate)</td></tr>
-<tr class="separator:a5c691c06488276a278904296974d20cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5afc044760b48619c4c3a359c72734c" id="r_aa5afc044760b48619c4c3a359c72734c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5afc044760b48619c4c3a359c72734c">gamestateMakeMoveInternal</a> (<a class="el" href="struct_gamestate.html">Gamestate</a> *gamestate, <a class="el" href="struct_gamestate.html">Gamestate</a> *<a class="el" href="#ab482139e3bfcf1ad744a5f0a6793d24a">newGamestate</a>, const enum <a class="el" href="move_8h.html#a30867d32ae0c776ddd66b07a2f4d930d">PIECE</a> piece, <a class="el" href="struct_position.html">Position</a> *<a class="el" href="#a818ce1ed710aea0606d9f411008b51c9">piecePosition</a>, <a class="el" href="struct_position.html">Position</a> *<a class="el" href="#adad974fcef088bfdaf5af08162a25f31">movePosition</a>, const enum <a class="el" href="move_8h.html#a30867d32ae0c776ddd66b07a2f4d930d">PIECE</a> promotionPiece)</td></tr>
+<tr class="memitem:add56ec1ad2398c9915313f0b6870cbcf" id="r_add56ec1ad2398c9915313f0b6870cbcf"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add56ec1ad2398c9915313f0b6870cbcf">destroyGamestate</a> (<a class="el" href="struct_gamestate.html">Gamestate</a> *gamestate)</td></tr>
+<tr class="separator:add56ec1ad2398c9915313f0b6870cbcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5afc044760b48619c4c3a359c72734c" id="r_aa5afc044760b48619c4c3a359c72734c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5afc044760b48619c4c3a359c72734c">gamestateMakeMoveInternal</a> (<a class="el" href="struct_gamestate.html">Gamestate</a> *gamestate, <a class="el" href="struct_gamestate.html">Gamestate</a> *newGamestate, const enum <a class="el" href="move_8h.html#a30867d32ae0c776ddd66b07a2f4d930d">PIECE</a> piece, <a class="el" href="struct_position.html">Position</a> *piecePosition, <a class="el" href="struct_position.html">Position</a> *movePosition, const enum <a class="el" href="move_8h.html#a30867d32ae0c776ddd66b07a2f4d930d">PIECE</a> promotionPiece)</td></tr>
 <tr class="separator:aa5afc044760b48619c4c3a359c72734c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2348e4d6d4533726d3a1f0cbaab7fa84" id="r_a2348e4d6d4533726d3a1f0cbaab7fa84"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2348e4d6d4533726d3a1f0cbaab7fa84">__attribute__</a> ((always_inline)) inline bool gamestate_makeMove(<a class="el" href="struct_gamestate.html">Gamestate</a> *gamestate</td></tr>
-<tr class="separator:a2348e4d6d4533726d3a1f0cbaab7fa84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:ab482139e3bfcf1ad744a5f0a6793d24a" id="r_ab482139e3bfcf1ad744a5f0a6793d24a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_gamestate.html">Gamestate</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab482139e3bfcf1ad744a5f0a6793d24a">newGamestate</a></td></tr>
-<tr class="separator:ab482139e3bfcf1ad744a5f0a6793d24a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a818ce1ed710aea0606d9f411008b51c9" id="r_a818ce1ed710aea0606d9f411008b51c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_gamestate.html">Gamestate</a> enum <a class="el" href="move_8h.html#a30867d32ae0c776ddd66b07a2f4d930d">PIECE</a> piece <a class="el" href="struct_position.html">Position</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a818ce1ed710aea0606d9f411008b51c9">piecePosition</a></td></tr>
-<tr class="separator:a818ce1ed710aea0606d9f411008b51c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adad974fcef088bfdaf5af08162a25f31" id="r_adad974fcef088bfdaf5af08162a25f31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_gamestate.html">Gamestate</a> enum <a class="el" href="move_8h.html#a30867d32ae0c776ddd66b07a2f4d930d">PIECE</a> piece <a class="el" href="struct_position.html">Position</a> <a class="el" href="struct_position.html">Position</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adad974fcef088bfdaf5af08162a25f31">movePosition</a></td></tr>
-<tr class="separator:adad974fcef088bfdaf5af08162a25f31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a86aea846d715692a0ad9926da8f6b8" id="r_a5a86aea846d715692a0ad9926da8f6b8"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a86aea846d715692a0ad9926da8f6b8">gamestate_makeMove</a> (<a class="el" href="struct_gamestate.html">Gamestate</a> *gamestate, <a class="el" href="struct_gamestate.html">Gamestate</a> *newGamestate, const enum <a class="el" href="move_8h.html#a30867d32ae0c776ddd66b07a2f4d930d">PIECE</a> piece, <a class="el" href="struct_position.html">Position</a> *piecePosition, <a class="el" href="struct_position.html">Position</a> *movePosition)</td></tr>
+<tr class="separator:a5a86aea846d715692a0ad9926da8f6b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a84a411e7a8368ccca2d9e147f0c8de2d" name="a84a411e7a8368ccca2d9e147f0c8de2d"></a>
@@ -161,6 +151,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>represents a gamestate </p>
 
 </div>
 </div>
@@ -175,128 +166,11 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>represents a node in the tree </p>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a2348e4d6d4533726d3a1f0cbaab7fa84" name="a2348e4d6d4533726d3a1f0cbaab7fa84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2348e4d6d4533726d3a1f0cbaab7fa84">&#9670;&#160;</a></span>__attribute__()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">__attribute__ </td>
-          <td>(</td>
-          <td class="paramtype">(always_inline)</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>A wrapper function for gamestateMakeMoveInternal, because that demands a PIECE definition for promotionPiece, which is usually NO_PIECE</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">gamestate</td><td>the current gamestate of the board </td></tr>
-    <tr><td class="paramname">newGamestate</td><td>struct to save the new gamestate in </td></tr>
-    <tr><td class="paramname">piece</td><td>the piece that made the move </td></tr>
-    <tr><td class="paramname">piecePosition</td><td>the current position of the piece that is moving </td></tr>
-    <tr><td class="paramname">movePosition</td><td>the end position of the piece that is moving</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>: false if the move is illegal, else true</dd></dl>
-<p>check if the stack is empty</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">stack</td><td>pointer to the <a class="el" href="struct_evaluation_stack.html">EvaluationStack</a> to check</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>: true if the stack is empty, else false</dd></dl>
-<p>pushes a <a class="el" href="struct_evaluation_data.html">EvaluationData</a> struct onto the stack</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">stack</td><td>the stack to push the data on </td></tr>
-    <tr><td class="paramname">data</td><td>the data to push on the stack</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section warning"><dt>Warning</dt><dd>ERROR_STACK_OVERFLOW: if the stack is full</dd></dl>
-<p>pops the last element pushed onto the stack and returns it. It also deletes it from the stack</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">stack</td><td>the stack to pop from</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>: the last element pushed onto the stack as <a class="el" href="struct_evaluation_data.html">EvaluationData</a> pointer</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>ERROR_STACK_UNDERFLOW: if the stack is empty</dd></dl>
-<p>pooks at the last element pushed onto the stack and returns it.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">stack</td><td>the stack to pop from</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>: the last element pushed onto the stack as <a class="el" href="struct_evaluation_data.html">EvaluationData</a> pointer</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>ERROR_STACK_UNDERFLOW: if the stack is empty</dd></dl>
-<p>creates an <a class="el" href="struct_evaluation_data.html">EvaluationData</a> struct with the given data</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">node</td><td>the <a class="el" href="struct_gamestate_tree_node.html">GamestateTreeNode</a> to save in <a class="el" href="struct_evaluation_data.html">EvaluationData</a> </td></tr>
-    <tr><td class="paramname">state</td><td>the current state of the node. If state = 0, push children. if state = 1, process evaluation</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>: pointer to the initialized <a class="el" href="struct_evaluation_data.html">EvaluationData</a> struct</dd></dl>
-<p>calculates all possible moves a given rook can do A wrapper function calling pawnMovesWithSideSelection.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">gamestate</td><td>the current gamestate </td></tr>
-    <tr><td class="paramname">position</td><td>position of the rook as a struct</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>bitboard representing all possible moves</dd></dl>
-<p>calculates all possible moves a given knight can do A wrapper function calling pawnMovesWithSideSelection.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">gamestate</td><td>the current gamestate </td></tr>
-    <tr><td class="paramname">position</td><td>position of the knight as a struct</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>bitboard representing all possible moves</dd></dl>
-<p>calculates all possible moves a given bishop can do A wrapper function calling pawnMovesWithSideSelection.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">gamestate</td><td>the current gamestate </td></tr>
-    <tr><td class="paramname">position</td><td>position of the bishop as a struct</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>bitboard representing all possible moves</dd></dl>
-<p>calculates all possible moves a given queen can do A wrapper function calling pawnMovesWithSideSelection.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">gamestate</td><td>the current gamestate </td></tr>
-    <tr><td class="paramname">position</td><td>position of the queen as a struct</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>bitboard representing all possible moves</dd></dl>
-<p>calculates all possible moves a given king can do A wrapper function calling pawnMovesWithSideSelection.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">gamestate</td><td>the current gamestate </td></tr>
-    <tr><td class="paramname">position</td><td>position of the king as a struct</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>bitboard representing all possible moves </dd></dl>
-
-</div>
-</div>
 <a id="afd4940c3c987f24b5f64826775f9f22f" name="afd4940c3c987f24b5f64826775f9f22f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afd4940c3c987f24b5f64826775f9f22f">&#9670;&#160;</a></span>countersInit()</h2>
 
@@ -316,8 +190,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a5c691c06488276a278904296974d20cd" name="a5c691c06488276a278904296974d20cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c691c06488276a278904296974d20cd">&#9670;&#160;</a></span>destroyGamestate()</h2>
+<a id="add56ec1ad2398c9915313f0b6870cbcf" name="add56ec1ad2398c9915313f0b6870cbcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add56ec1ad2398c9915313f0b6870cbcf">&#9670;&#160;</a></span>destroyGamestate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -326,7 +200,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void destroyGamestate </td>
+          <td class="memname">static void destroyGamestate </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_gamestate.html">Gamestate</a> *</td>          <td class="paramname"><span class="paramname"><em>gamestate</em></span></td><td>)</td>
           <td></td>
@@ -334,7 +208,7 @@ Variables</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -345,6 +219,62 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a5a86aea846d715692a0ad9926da8f6b8" name="a5a86aea846d715692a0ad9926da8f6b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a86aea846d715692a0ad9926da8f6b8">&#9670;&#160;</a></span>gamestate_makeMove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool gamestate_makeMove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_gamestate.html">Gamestate</a> *</td>          <td class="paramname"><span class="paramname"><em>gamestate</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_gamestate.html">Gamestate</a> *</td>          <td class="paramname"><span class="paramname"><em>newGamestate</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const enum <a class="el" href="move_8h.html#a30867d32ae0c776ddd66b07a2f4d930d">PIECE</a></td>          <td class="paramname"><span class="paramname"><em>piece</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_position.html">Position</a> *</td>          <td class="paramname"><span class="paramname"><em>piecePosition</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_position.html">Position</a> *</td>          <td class="paramname"><span class="paramname"><em>movePosition</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A wrapper function for gamestateMakeMoveInternal, because that demands a PIECE definition for promotionPiece, which is usually NO_PIECE</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gamestate</td><td>the current gamestate of the board </td></tr>
+    <tr><td class="paramname">newGamestate</td><td>struct to save the new gamestate in </td></tr>
+    <tr><td class="paramname">piece</td><td>the piece that made the move </td></tr>
+    <tr><td class="paramname">piecePosition</td><td>the current position of the piece that is moving </td></tr>
+    <tr><td class="paramname">movePosition</td><td>the end position of the piece that is moving</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: false if the move is illegal, else true </dd></dl>
 
 </div>
 </div>
@@ -401,7 +331,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>initializes all variables with values and returns an initialized gamestate. This should be the only way to get a new gamestate.</p>
-<dl class="section return"><dt>Returns</dt><dd>: <a class="el" href="struct_gamestate.html">Gamestate</a> struct after initialization </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>: <a class="el" href="struct_gamestate.html">Gamestate</a> struct after initialization</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>ERROR_MEMORY_MALLOC_FAILED: if malloc failed </dd></dl>
 
 </div>
 </div>
@@ -455,57 +386,10 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>: false if the move is illegal, else true </dd></dl>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="adad974fcef088bfdaf5af08162a25f31" name="adad974fcef088bfdaf5af08162a25f31"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adad974fcef088bfdaf5af08162a25f31">&#9670;&#160;</a></span>movePosition</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_gamestate.html">Gamestate</a> enum <a class="el" href="move_8h.html#a30867d32ae0c776ddd66b07a2f4d930d">PIECE</a> piece <a class="el" href="struct_position.html">Position</a> <a class="el" href="struct_position.html">Position</a>* movePosition</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">{</div>
-<div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="#aa5afc044760b48619c4c3a359c72734c">gamestateMakeMoveInternal</a>(gamestate, <a class="code hl_variable" href="#ab482139e3bfcf1ad744a5f0a6793d24a">newGamestate</a>, piece, <a class="code hl_variable" href="#a818ce1ed710aea0606d9f411008b51c9">piecePosition</a>, <a class="code hl_variable" href="#adad974fcef088bfdaf5af08162a25f31">movePosition</a>, <a class="code hl_enumvalue" href="move_8h.html#a30867d32ae0c776ddd66b07a2f4d930daf9f748c8be10f498deb994733ce37df5">NO_PIECE</a>)</div>
-<div class="ttc" id="agamestate_8h_html_a818ce1ed710aea0606d9f411008b51c9"><div class="ttname"><a href="#a818ce1ed710aea0606d9f411008b51c9">piecePosition</a></div><div class="ttdeci">Gamestate enum PIECE piece Position * piecePosition</div><div class="ttdef"><b>Definition</b> gamestate.h:112</div></div>
-<div class="ttc" id="agamestate_8h_html_aa5afc044760b48619c4c3a359c72734c"><div class="ttname"><a href="#aa5afc044760b48619c4c3a359c72734c">gamestateMakeMoveInternal</a></div><div class="ttdeci">bool gamestateMakeMoveInternal(Gamestate *gamestate, Gamestate *newGamestate, const enum PIECE piece, Position *piecePosition, Position *movePosition, const enum PIECE promotionPiece)</div><div class="ttdef"><b>Definition</b> gamestate.c:53</div></div>
-<div class="ttc" id="agamestate_8h_html_ab482139e3bfcf1ad744a5f0a6793d24a"><div class="ttname"><a href="#ab482139e3bfcf1ad744a5f0a6793d24a">newGamestate</a></div><div class="ttdeci">Gamestate * newGamestate</div><div class="ttdef"><b>Definition</b> gamestate.h:112</div></div>
-<div class="ttc" id="agamestate_8h_html_adad974fcef088bfdaf5af08162a25f31"><div class="ttname"><a href="#adad974fcef088bfdaf5af08162a25f31">movePosition</a></div><div class="ttdeci">Gamestate enum PIECE piece Position Position * movePosition</div><div class="ttdef"><b>Definition</b> gamestate.h:112</div></div>
-<div class="ttc" id="amove_8h_html_a30867d32ae0c776ddd66b07a2f4d930daf9f748c8be10f498deb994733ce37df5"><div class="ttname"><a href="move_8h.html#a30867d32ae0c776ddd66b07a2f4d930daf9f748c8be10f498deb994733ce37df5">NO_PIECE</a></div><div class="ttdeci">@ NO_PIECE</div><div class="ttdef"><b>Definition</b> move.h:9</div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="ab482139e3bfcf1ad744a5f0a6793d24a" name="ab482139e3bfcf1ad744a5f0a6793d24a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab482139e3bfcf1ad744a5f0a6793d24a">&#9670;&#160;</a></span>newGamestate</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_gamestate.html">Gamestate</a>* newGamestate</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a818ce1ed710aea0606d9f411008b51c9" name="a818ce1ed710aea0606d9f411008b51c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a818ce1ed710aea0606d9f411008b51c9">&#9670;&#160;</a></span>piecePosition</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_gamestate.html">Gamestate</a> enum <a class="el" href="move_8h.html#a30867d32ae0c776ddd66b07a2f4d930d">PIECE</a> piece <a class="el" href="struct_position.html">Position</a>* piecePosition</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>: false if the move is illegal, else true</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>ERROR_PROMOTION_PIECE_UNAVAILABLE: if the promotion flag is set and the promotion piece is not Rook, Knight, Bishop, Queen </dd>
+<dd>
+ERROR_PIECE_NOT_SELECTED: if piece is not defined/selected </dd></dl>
 
 </div>
 </div>
