@@ -46,10 +46,6 @@ GamestateConfig gamestateConfigInit() {
     return config;
 }
 
-inline void destroyGamestate(Gamestate* gamestate) {
-    free(gamestate);
-}
-
 bool gamestateMakeMoveInternal(Gamestate* gamestate, Gamestate* newGamestate, const enum PIECE piece, Position* piecePosition, Position* movePosition, const enum PIECE promotionPiece) {
     // if last gamestate turn was black then the isWhiteTurn will be false
     int side = !gamestate->flags.isWhiteTurn ? 1 : 0; // the color that is currently making a move

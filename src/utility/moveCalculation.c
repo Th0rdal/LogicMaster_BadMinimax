@@ -4,10 +4,10 @@ static inline uint64_t horizontalSlide(const Gamestate* gamestate, const short p
 static inline uint64_t verticalSlide(const Gamestate* gamestate, const short position);
 static inline uint64_t diagonalSlide(const Gamestate* gamestate, const short position);
 static inline uint64_t antiDiagonalSlide(const Gamestate* gamestate, const short position);
-static __attribute__((always_inline)) uint64_t __horizontalSlide(const Gamestate* gamestate, const short position, const bool forWhitePiece);
-static __attribute__((always_inline)) uint64_t __verticalSlide(const Gamestate* gamestate, const short position, const bool forWhitePiece);
-static __attribute__((always_inline)) uint64_t __diagonalSlide(const Gamestate* gamestate, const short position, const bool forWhitePiece);
-static __attribute__((always_inline)) uint64_t __antiDiagonalSlide(const Gamestate* gamestate, const short position, const bool forWhitePiece);
+static uint64_t __horizontalSlide(const Gamestate* gamestate, const short position, const bool forWhitePiece);
+static uint64_t __verticalSlide(const Gamestate* gamestate, const short position, const bool forWhitePiece);
+static uint64_t __diagonalSlide(const Gamestate* gamestate, const short position, const bool forWhitePiece);
+static uint64_t __antiDiagonalSlide(const Gamestate* gamestate, const short position, const bool forWhitePiece);
 static inline bool canKCastle(const Gamestate* gamestate);
 static inline bool canQCastle(const Gamestate* gamestate);
 
@@ -235,7 +235,7 @@ static inline bool canQCastle(const Gamestate* gamestate) {
  *
  * @return: bitboard representing all attacks the piece can make in horizontal direction
  * */
-static __attribute__((always_inline)) uint64_t horizontalSlide(const Gamestate* gamestate, const short position) {
+static uint64_t horizontalSlide(const Gamestate* gamestate, const short position) {
     return __horizontalSlide(gamestate, position, !gamestate->flags.isWhiteTurn);
 }
 
@@ -266,7 +266,7 @@ static inline uint64_t __horizontalSlide(const Gamestate* gamestate, const short
  *
  * @return: bitboard representing all attacks the piece can make in vertical direction
  * */
-static __attribute__((always_inline)) uint64_t verticalSlide(const Gamestate* gamestate, const short position) {
+static uint64_t verticalSlide(const Gamestate* gamestate, const short position) {
     return __verticalSlide(gamestate, position, !gamestate->flags.isWhiteTurn);
 }
 
@@ -301,7 +301,7 @@ static inline uint64_t __verticalSlide(const Gamestate* gamestate, const short p
  * bitboard representing all attacks the piece can make in diagonal direction
  *
  * */
-static __attribute__((always_inline)) uint64_t antiDiagonalSlide(const Gamestate* gamestate, const short position) {
+static uint64_t antiDiagonalSlide(const Gamestate* gamestate, const short position) {
     return __antiDiagonalSlide(gamestate, position, !gamestate->flags.isWhiteTurn);
 }
 
@@ -348,7 +348,7 @@ static inline uint64_t __antiDiagonalSlide(const Gamestate* gamestate, const sho
  *
  * @return: bitboard representing all attacks the piece can make in diagonal direction
  * */
-static __attribute__((always_inline)) uint64_t diagonalSlide(const Gamestate* gamestate, const short position) {
+static uint64_t diagonalSlide(const Gamestate* gamestate, const short position) {
     return __diagonalSlide(gamestate, position, !gamestate->flags.isWhiteTurn); 
 }
 

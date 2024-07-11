@@ -9,24 +9,27 @@
 typedef struct GamestateTreeNode GamestateTreeNode;
 typedef struct GamestateTreeBranch GamestateTreeBranch;
 
+/*! represents a branch in the tree*/
 typedef struct GamestateTreeBranch {
     GamestateTreeBranch* next;
     GamestateTreeBranch* prev;
     GamestateTreeNode* node;
 } GamestateTreeBranch;
 
+/*! represents a node in the tree*/
 typedef struct GamestateTreeNode {
     struct Gamestate* gamestate;
     GamestateTreeBranch* children;
 } GamestateTreeNode;
 
+/*! contains the tree start node and a lock*/
 typedef struct {
     GamestateTreeNode* head;
     CRITICAL_SECTION lock;
 } GamestateTree;
 
 // initialize tree needs to be called before this variable can be used correctly
-extern GamestateTree* tree;
+extern GamestateTree* tree; /*! a global variable pointing to the tree structure*/
 
 /*!
  * initializes the GamestateTree. This needs to be called before the tree variable can be used
@@ -69,6 +72,8 @@ void destroyGamestateTreeBranchWithInside(GamestateTreeBranch* branch);
  * @param gamestate: the gamestate to create the GamestateTree node of
  *
  * @return: the node that was just created
+ *
+ * @warning ERROR_MEMORY_MALLOC_FAILED: if malloc fails
  * */
 GamestateTreeNode* criticalCreateGamestateTreeNode(struct Gamestate* gamestate);
 
@@ -93,4 +98,5 @@ int size(GamestateTreeNode* node);
  * @return: The GamestateTreeNode pointer to the node containing the gamestate. If the gamestate was not found, it will return NULL
  *  */
 GamestateTreeNode* searchGamestateInTree(GamestateTreeNode* node, Gamestate* gamestate);
+
 #endif

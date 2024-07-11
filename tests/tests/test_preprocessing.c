@@ -24,12 +24,12 @@ void test_moveGeneration() {
     short expectedValue = 38;
     int expectedTreeValue = 1;
     char* expected[] = {
-        "e4 e5",
-        "f4 f5",
-        "g2 g4",
-        "g2 g3",
-        "h2 h4",
-        "h2 h3",
+        "Pe4 e5",
+        "Pf4 f5",
+        "Pg2 g4",
+        "Pg2 g3",
+        "Ph2 h4",
+        "Ph2 h3",
         "Ra1xa6",
         "Ra1 a5",
         "Ra1 a4",
@@ -92,6 +92,10 @@ void test_moveGeneration() {
 }
 
 void test_moveGenerationWithOneThread() {
+    command_args* args = (command_args*)malloc(sizeof(command_args));
+    args->maxDepth = 1;
+    args->maxThreads = 1;
+
     initializeTree();
     Gamestate *gamestate = gamestateInit();
     // Bitboards
@@ -112,7 +116,7 @@ void test_moveGenerationWithOneThread() {
 
     int expectedTreeValue = 38+1; //38 moves possible plus the one base move defined above
 
-    MoveGenerationThreadPool* pool = moveGenerationThreadPoolInit(1, 1);    
+    MoveGenerationThreadPool* pool = moveGenerationThreadPoolInit(args);    
     pool->workCounter++;
     enqueue(pool->queue, gamestate);
 
@@ -145,6 +149,10 @@ void test_moveGenerationWithOneThread() {
 }
 
 void test_moveGenerationWithThreads() {
+    command_args* args = (command_args*)malloc(sizeof(command_args));
+    args->maxDepth = 1;
+    args->maxThreads = 1;
+
     Gamestate *gamestate = gamestateInit();
     //clock_t start, end;
     // Bitboards
@@ -167,7 +175,8 @@ void test_moveGenerationWithThreads() {
     
     for (int depth = 1; depth < 5; depth++) {
         initializeTree();
-        MoveGenerationThreadPool* pool = moveGenerationThreadPoolInit(depth, 32);    
+        args->maxDepth = depth;
+        MoveGenerationThreadPool* pool = moveGenerationThreadPoolInit(args);    
         pool->workCounter++;
         enqueue(pool->queue, gamestate);
         

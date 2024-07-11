@@ -3,7 +3,7 @@
 static inline void getFenPart(const char* fen, short* startIndex, char* part);
 static inline void setPieceOnBitboard(const char fenChar, const uint64_t value, Bitboards* bitboards);
 
-void fenToBitboard(char* fen, Gamestate* gamestate) {
+void fenToBitboard(const char* fen, Gamestate* gamestate) {
     short maxLoopCounter = 0;
     short counter = 0;
     short partCounter = 0;
@@ -99,6 +99,7 @@ void fenToBitboard(char* fen, Gamestate* gamestate) {
  * @param value: the uint64_t value representing the square the piece is on
  * @param bitboards: Bitboard struct pointer representing the board
  *
+ * @warning ERROR_FEN_CHAR_NOT_DEFINED: if a char is given that does not correspond with a piecee
  */
 static inline void setPieceOnBitboard(const char fenChar, const uint64_t value, Bitboards* bitboards) {
     switch (fenChar) {
@@ -138,7 +139,7 @@ static inline void setPieceOnBitboard(const char fenChar, const uint64_t value, 
  * @param startIndex: pointer of counter, representing the first index of the next fen notation part. THIS MUST NOT BE SPACE!
  * @param part: char array to save the result in
  *
- * @exit ERROR_FETCHING_FEN_PART: If after completing fetching, the next character is not a space
+ * @warning ERROR_FETCHING_FEN_PART: If after completing fetching, the next character is not a space
  *
  */
 static inline void getFenPart(const char* fen, short* startIndex, char* toWrite) {

@@ -6,6 +6,7 @@
 
 #include "position.h"
 
+/*! represents a single board state */
 typedef struct {
    uint64_t occupancy;
    
@@ -22,6 +23,7 @@ typedef struct {
    uint64_t possibleMovesAfterCheck; // only has interesting value if checkChecked is true & currently a check
 } Bitboards;
 
+/*! represents each file as a struct. Used for calculations*/
 typedef struct {
     const uint64_t fileA;
     const uint64_t fileB;
@@ -36,6 +38,7 @@ typedef struct {
     const uint64_t reverseBoards[8];
 } FileBitboards;
 
+/*! represents each row as a struct. Used for calculations*/
 typedef struct {
     const uint64_t rank1;
     const uint64_t rank2;
@@ -52,6 +55,7 @@ typedef struct {
     const short pawn2SquareMoveRank[2];
 } RankBitboards;
 
+/*! represents each diagonal as a struct. Used for calculations*/
 typedef struct { // diagonals go from left bottom to right top e.g., A1 - H8
     const uint64_t diagonal1; //A8
     const uint64_t diagonal2; //A7-B8
@@ -73,11 +77,13 @@ typedef struct { // diagonals go from left bottom to right top e.g., A1 - H8
                           
 } DiagonalBitboards;
 
+/*! represents a mode dictionary for any piece. Array position 0 equals field H1, going left and up*/
 typedef struct {
     const int size;
     const uint64_t boards[64];
 } MoveDictionary;
 
+/*! a struct containing important special fields*/
 typedef struct {
     const uint64_t queenCastle[2]; // mask for all squares that need to be looked at for queen castling
     const uint64_t kingCastle[2]; // mask for all squares that need to be looked at for king castling
@@ -93,15 +99,21 @@ typedef struct {
     const uint64_t qCastleRookBitboard[2];
 } SpecialMoveDictionary;
 
-extern Bitboards bitboardsInit();
+/*
+ * creates and initializes a bitboard struct. All values will be initialized with 0.
+ *
+ * @return: initialized bitboard
+ *
+ */
+Bitboards bitboardsInit();
 
-extern const FileBitboards fileBitboards;
-extern const RankBitboards rankBitboards;
-extern const DiagonalBitboards diagonalBitboards;
-extern const DiagonalBitboards antiDiagonalBitboards;
-extern const MoveDictionary knightMoveDictionary;
-extern const MoveDictionary kingMoveDictionary;
-extern const MoveDictionary positionDictionary;
-extern const SpecialMoveDictionary specialMoveDictionary;
+extern const FileBitboards fileBitboards; /*! initialized to the file*/
+extern const RankBitboards rankBitboards; /*! initialized to the rank*/
+extern const DiagonalBitboards diagonalBitboards; /*! initialized to the diagonal*/
+extern const DiagonalBitboards antiDiagonalBitboards; /*! initialized to the anti diagonal*/
+extern const MoveDictionary knightMoveDictionary; /*! initialized to contain all moves a knight can do from a given position*/
+extern const MoveDictionary kingMoveDictionary; /*! initialized to contain all moves the king can do from a given position (excluding castling)*/
+extern const MoveDictionary positionDictionary; /*! converts a given position as int to a bitboard with only the given position as a 1 */
+extern const SpecialMoveDictionary specialMoveDictionary; /*! initialized for all special positions (castling, pawn 2 moves, etc...) */
 
 #endif

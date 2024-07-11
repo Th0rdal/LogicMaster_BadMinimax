@@ -26,6 +26,7 @@
 
 // MAX_WAIT_TIME is set in minimax.h
 
+/*! represents a evaluation thread pool*/
 typedef struct {
     HANDLE* threads;
     int maxThreads;
@@ -68,6 +69,7 @@ Gamestate* evaluateLastGamestate(GamestateTreeNode* gamestateTreeNode);
  *
  * @param pool: the struct to destroy
  *
+ * @warning ERROR_MEMORY_MALLOC_FAILED: if malloc failed
  * */
 void destroyEvaluationThreadPool(EvaluationThreadPool* pool);
 
@@ -75,6 +77,9 @@ void destroyEvaluationThreadPool(EvaluationThreadPool* pool);
  * starts evaluating the gamestate tree
  *
  * @param args: command args struct pointer with configuration
+ * 
+ * @warning ERROR_THREADS_TIMEOUT: if a thread took longer than the defined MAX_WAIT_TIME
  * */
 void evaluation_start(command_args* args);
+
 #endif

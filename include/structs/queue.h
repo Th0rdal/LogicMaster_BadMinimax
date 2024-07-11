@@ -16,6 +16,7 @@ static const int QUEUE_SIZE_MULTIPLIER = 75;
 static const int ENQUEUE_WAIT_TIME = 1500;
 static const int DEQUEUE_WAIT_TIME = 100;
 
+/*! representing a queue*/
 typedef struct {
     Gamestate** data;
     int front;
@@ -31,6 +32,7 @@ typedef struct {
  *
  * @param maxDepth: a value that will be multiplied with QUEUE_SIZE_BASE to determine the queue size
  *
+ * @warning ERROR_MEMORY_MALLOC_FAILED: if malloc fails
  * */
 Queue* queueInit(int maxDepth);
 
@@ -40,6 +42,10 @@ Queue* queueInit(int maxDepth);
  * @param queue: the queue to add the gamestate to
  * @param gamestate: the gamestate to add
  *
+ * @warning WARNING_QUEUE_TOO_SMALL: if the queue is too small
+ * @warning WARNING_RESIZING_QUEUE: if the queue is resized 
+ * @warning ERROR_MALLOC_REALLOC_FAILED: if the realloc function failed
+ * @warning ERROR_QUEUE_TOO_SMALL: if QUEUE_RESIZE is not defined and the queue is full
  * */
 void enqueue(Queue* queue, Gamestate* gamestate);
 

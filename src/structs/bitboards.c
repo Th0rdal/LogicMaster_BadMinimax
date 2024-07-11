@@ -1,11 +1,5 @@
 #include "structs/bitboards.h"
 
-/*
- * creates and initializes a bitboard struct. All values will be initialized with 0.
- *
- * @return: initialized bitboard
- *
- */
 Bitboards bitboardsInit() {
     Bitboards bitboards;
     bitboards.occupancy = 0;
@@ -21,7 +15,7 @@ Bitboards bitboardsInit() {
     return bitboards;
 }
 
-// variable to initialize fileBoards. not actually used anywhere else
+/*! variable to initialize fileBoards. Not actually used anywhere else*/
 static const uint64_t fileA = 0x8080808080808080ULL;
 
 const FileBitboards fileBitboards = {

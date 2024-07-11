@@ -2,7 +2,7 @@
 
 static inline void updateWorkCounter(MoveGenerationThreadPool *pool, const int value);
 static inline void destroyGenerationThreadPool(MoveGenerationThreadPool *pool);
-static __attribute__((always_inline)) inline void addToQueue(Gamestate* newGamestate, GamestateTreeNode* node, Queue* queue, int* movesAddedToQueue);
+static inline void addToQueue(Gamestate* newGamestate, GamestateTreeNode* node, Queue* queue, int* movesAddedToQueue);
 int calculateMoves(Gamestate* gamestate, Queue* queue, GamestateTreeNode* node);
 
 DWORD WINAPI generationWorker(LPVOID lpParam) {
@@ -233,7 +233,7 @@ int calculateMoves(Gamestate* gamestate, Queue* queue, GamestateTreeNode* node) 
  * handles everything needed to add a new gamestate to the work queue.
  * Supposed to be inlined at location
  * */
-static __attribute__((always_inline)) inline void addToQueue(Gamestate* newGamestate, GamestateTreeNode* node, Queue* queue, int* movesAddedToQueue) {
+static inline void addToQueue(Gamestate* newGamestate, GamestateTreeNode* node, Queue* queue, int* movesAddedToQueue) {
     newGamestate->config.parent = node;
     if (newGamestate->config.node == NULL) {
         createGamestateTreeNode(newGamestate);

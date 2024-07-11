@@ -1,6 +1,6 @@
 #include "structs/move.h"
 
-MoveFlags moveFlagsInit();
+static MoveFlags moveFlagsInit();
 
 Move moveInit() {
     Move move;
@@ -12,7 +12,10 @@ Move moveInit() {
     return move;
 }
 
-MoveFlags moveFlagsInit() {
+/*!
+ * creates MoveFlags struct and initializes all values with false
+ * */
+static MoveFlags moveFlagsInit() {
     MoveFlags flags = {
         .capture = false,
         .promotion = false,

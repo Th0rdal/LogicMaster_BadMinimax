@@ -39,12 +39,13 @@
 // move generation
 #define ERROR_PIECE_NOT_SELECTED 120
 
-
+// warning codes
 #define WARNING_COULD_NOT_RETRIEVE_CORE_NUMBER 501 
 #define WARNING_QUEUE_TOO_SMALL 502
 #define WARNING_RESIZING_QUEUE 503
 #define WARNING_STACK_TOO_SMALL 504
 #define WARNING_RESIZING_STACK 505
+
 /*!
  * throws an error and then exists the program
  *
@@ -56,7 +57,7 @@
 void throwError(int errorCode, char* format, ...);
 
 /*!
- * throws a warning to stderr and then returns
+ * throws a warning to stderr and then returns to continue the program.
  *
  * @param warningCode: the warningCode of the warning
  * @param format: a char* with the error message. Variables can be given as %d, %s, etc...

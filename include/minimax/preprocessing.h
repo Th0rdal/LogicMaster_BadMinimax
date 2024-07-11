@@ -23,6 +23,7 @@
 
 // MAX_WAIT_TIME is set in minimax.h
 
+/*! represents a move generation thread pool*/
 typedef struct {
     HANDLE* threads;
     int maxThreads;
@@ -40,6 +41,7 @@ typedef struct {
  * @param args: command args struct pointer with configuration
  * @param gamestate: the starting gamestate
  *
+ * @warning ERROR_THREADS_TIMEOUT: if a thread surpasses the max work time defined by MAX_WAIT_TIME
  **/
 void preprocessing_start(command_args* args, Gamestate* gamestate);
 
@@ -57,6 +59,8 @@ DWORD WINAPI generationWorker(LPVOID lpParam);
  * @param args: command args struct pointer with configuration
  *
  * @return: the initialized MoveGenerationThreadPool pointer 
+ *
+ * @warning ERROR_MEMORY_MALLOC_FAILED: if malloc failed
  * */
 MoveGenerationThreadPool* moveGenerationThreadPoolInit(command_args* args);
 

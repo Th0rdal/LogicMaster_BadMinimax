@@ -31,7 +31,7 @@ uint64_t pawnMovesWithSideSelection(const Gamestate* gamestate, const Position* 
  * @return bitboard representing all possible moves
  *
  * */ 
-__attribute__((always_inline)) inline uint64_t pawnMoves(const Gamestate* gamestate, const Position* position) {
+static inline uint64_t pawnMoves(const Gamestate* gamestate, const Position* position) {
     return pawnMovesWithSideSelection(gamestate, position, !gamestate->flags.isWhiteTurn);
 }
 
@@ -56,7 +56,7 @@ uint64_t rookMovesWithSideSelection(const Gamestate* gamestate, const Position* 
  * @return bitboard representing all possible moves
  *
  * */
-__attribute__((always_inline)) inline uint64_t rookMoves(const Gamestate* gamestate, const Position* position) {
+static inline uint64_t rookMoves(const Gamestate* gamestate, const Position* position) {
     return rookMovesWithSideSelection(gamestate, position, !gamestate->flags.isWhiteTurn);
 }
 
@@ -81,7 +81,7 @@ uint64_t knightMovesWithSideSelection(const Gamestate* gamestate, const Position
  * @return bitboard representing all possible moves
  *
  * */
-__attribute__((always_inline)) inline uint64_t knightMoves(const Gamestate* gamestate, const Position* position) {
+static inline uint64_t knightMoves(const Gamestate* gamestate, const Position* position) {
     return knightMovesWithSideSelection(gamestate, position, !gamestate->flags.isWhiteTurn);
 }
 
@@ -106,7 +106,7 @@ uint64_t bishopMovesWithSideSelection(const Gamestate* gamestate, const Position
  * @return bitboard representing all possible moves
  *
  * */
-__attribute__((always_inline)) inline uint64_t bishopMoves(const Gamestate* gamestate, const Position* position) {
+static inline uint64_t bishopMoves(const Gamestate* gamestate, const Position* position) {
     return bishopMovesWithSideSelection(gamestate, position, !gamestate->flags.isWhiteTurn);
 }
 
@@ -131,7 +131,7 @@ uint64_t queenMovesWithSideSelection(const Gamestate* gamestate, const Position*
  * @return bitboard representing all possible moves
  *
  * */
-__attribute__((always_inline)) inline uint64_t queenMoves(const Gamestate* gamestate, const Position* position) {
+static inline uint64_t queenMoves(const Gamestate* gamestate, const Position* position) {
     return queenMovesWithSideSelection(gamestate, position, !gamestate->flags.isWhiteTurn);
 }
 
@@ -156,7 +156,7 @@ uint64_t kingMovesWithSideSelection(const Gamestate* gamestate, const Position* 
  * @return bitboard representing all possible moves
  *
  * */
-__attribute__((always_inline)) inline uint64_t kingMoves(const Gamestate* gamestate, const Position* position) {
+static inline uint64_t kingMoves(const Gamestate* gamestate, const Position* position) {
     return kingMovesWithSideSelection(gamestate, position, !gamestate->flags.isWhiteTurn);
 }
 

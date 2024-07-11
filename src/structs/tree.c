@@ -62,6 +62,11 @@ GamestateTreeNode* criticalCreateGamestateTreeNode(Gamestate* gamestate) {
     return temp;
 }
 
+/*!
+ * destroys a GamestateTreeNode and calls destroyGamestateTreeBranchWithInside on all children
+ *
+ * @param node: the GamestateTreeNode to destroy
+ * */
 inline void destroyGamestateTreeNodeWithInside(GamestateTreeNode* node) {
     return;
     if (node == NULL) {
@@ -81,6 +86,11 @@ inline void destroyGamestateTreeNodeWithInside(GamestateTreeNode* node) {
     free(node);
 }
 
+/*!
+ * destroys a GamestateTreeBranch and calls destroyGamestateTreeNodeWithInside on its saved node
+ *
+ *  @param branch: the GamestateTreeBranch to destroy
+ *  */
 inline void destroyGamestateTreeBranchWithInside(GamestateTreeBranch* branch) {
     return;
     if (branch == NULL)  {

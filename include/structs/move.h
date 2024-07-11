@@ -5,6 +5,7 @@
 
 #include "structs/position.h"
 
+/*! enum representing a piece id*/
 enum PIECE {
     NO_PIECE,
     PAWN,
@@ -15,6 +16,7 @@ enum PIECE {
     KING
 };
 
+/*! representing flags a move might have*/
 typedef struct {
     bool capture;
     bool promotion;
@@ -30,6 +32,7 @@ typedef struct {
     bool isWhiteTurn;
 } MoveFlags;
 
+/*! represents a move*/
 typedef struct {
     enum PIECE piece;
     Position startPosition;

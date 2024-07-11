@@ -7,9 +7,13 @@
 
 #include "errors.h"
 
-typedef struct { // initialized to 0
-    short rank; // row
-    short file; //column
+/*!
+ * represents a given Coordinate on the Board.
+ * initialized to 0
+ * */
+typedef struct {
+    short rank; 
+    short file;
 } Position;
 
 /*!
@@ -31,15 +35,6 @@ Position positionInit();
 void checkPositionValues(Position* position);
 
 /*!
- * fills given position struct based on the number given in short. 0 = A8, 7 = A1
- *
- * @param position: pointer to position struct that should be written to
- * @param number: short number that represents the position
- *
- * */
-void setPositionFromShort(Position* position, const short number);
-
-/*!
  * returns a Position array with all positions that are within the bitboard.
  * A position is set, if the bit at the position is 1
  * RESULT NEEDS TO BE FREED
@@ -53,6 +48,15 @@ void setPositionFromShort(Position* position, const short number);
  *
  * */
 Position* getAllPiecePositions(const uint64_t bitboard, const short pieces);
+
+/*!
+ * fills given position struct based on the number given in short. 0 = A8, 7 = A1
+ *
+ * @param position: pointer to position struct that should be written to
+ * @param number: short number that represents the position
+ *
+ * */
+void setPositionFromShort(Position* position, const short number);
 
 /*!
  * convert a char Array to a position. This function expects a char array with length 2. All further characters will be ignored!

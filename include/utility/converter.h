@@ -20,6 +20,6 @@
  * @param bitboards: Bitboards struct pointer to empty bitboard
  *
  * */
-void fenToBitboard(char* fen, Gamestate* gamestate);
+void fenToBitboard(const char* fen, Gamestate* gamestate);
 
 #endif

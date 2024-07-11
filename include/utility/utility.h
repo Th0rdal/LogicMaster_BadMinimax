@@ -14,6 +14,7 @@
  * @param charNumber: pointer to array to convert to number
  *
  * @return: integer representing the char array
+ *
  * @warning ERROR_CONVERTING_CHARARRAY_TO_INT: if there is an unexpected character in the array
  *
  */
@@ -27,5 +28,5 @@ int convertCharArrayToInt(char* charNumber);
  * @return: number bitwise reversed
  *
  */
-uint64_t reverseBitboard(uint64_t bitboard);
+uint64_t reverseBitboard(const uint64_t bitboard);
 #endif

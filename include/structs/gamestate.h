@@ -12,11 +12,15 @@ typedef struct GamestateTreeNode GamestateTreeNode; // forward declaration of tr
 #include "structs/tree.h"
 //#include "utility/moveCalculation.h" at the bottom as gamestate needs to be defined first
 
+/*!
+ * represents the counters of the current gamestate
+ * */
 typedef struct {
     int fullMove;
     int halfMove;
 } Counters;
 
+/*! represents gamestate flags (castling, current turn, en passant)*/
 typedef struct { // all initialized to false
     bool kCastle[2]; // index 0 = black, index 1 = white
     bool qCastle[2];
@@ -24,6 +28,7 @@ typedef struct { // all initialized to false
     bool canEnPassant;
 } GamestateFlags;
 
+/*! represents configuration variables*/
 typedef struct {
     bool checkedCheck;
     struct Gamestate* lastGamestate; //forward declaration
@@ -34,6 +39,7 @@ typedef struct {
     float averageEvaluation;
 } GamestateConfig;
 
+/*! represents a gamestate */
 typedef struct Gamestate {
     Bitboards bitboards;
     Counters counters;
@@ -48,6 +54,8 @@ typedef struct Gamestate {
  * This should be the only way to get a new gamestate.
  *
  * @return: Gamestate struct after initialization
+ *
+ * @warning ERROR_MEMORY_MALLOC_FAILED: if malloc failed
  */
 Gamestate* gamestateInit();
 
@@ -81,7 +89,9 @@ GamestateConfig gamestateConfigInit();
  * @param gamestate: pointer to the gamestate to destroy
  *
  * */
-void destroyGamestate(Gamestate* gamestate);
+static inline void destroyGamestate(Gamestate* gamestate) {
+    free(gamestate);
+}
 
 /**
  * makes a move on the boards and creates a new gamestate representing the made move.
@@ -94,6 +104,9 @@ void destroyGamestate(Gamestate* gamestate);
  * @param promotionPiece: the piece the pawn is promoted to (NO_PIECE if no promotion)
  *
  * @return: false if the move is illegal, else true
+ *
+ * @warning ERROR_PROMOTION_PIECE_UNAVAILABLE: if the promotion flag is set and the promotion piece is not Rook, Knight, Bishop, Queen
+ * @warning ERROR_PIECE_NOT_SELECTED: if piece is not defined/selected
  *
  * */
 bool gamestateMakeMoveInternal(Gamestate* gamestate, Gamestate* newGamestate, const enum PIECE piece, Position* piecePosition, Position* movePosition, const enum PIECE promotionPiece);
@@ -109,7 +122,7 @@ bool gamestateMakeMoveInternal(Gamestate* gamestate, Gamestate* newGamestate, co
  * 
  * @return: false if the move is illegal, else true
  * */
-__attribute__((always_inline)) inline bool gamestate_makeMove(Gamestate* gamestate, Gamestate* newGamestate, const enum PIECE piece, Position* piecePosition, Position* movePosition) {
+static inline bool gamestate_makeMove(Gamestate* gamestate, Gamestate* newGamestate, const enum PIECE piece, Position* piecePosition, Position* movePosition) {
     return gamestateMakeMoveInternal(gamestate, newGamestate, piece, piecePosition, movePosition, NO_PIECE);
 }
 

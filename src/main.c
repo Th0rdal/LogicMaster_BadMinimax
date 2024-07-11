@@ -1,15 +1,15 @@
 #include "main.h"
 
-/**
+/*!
  * Brings input into a normed format (gamestate) before giving it to the algorithm
  *
  * @param inputFormat: the INPUTFORMAT enum representing the format of the input string
  * @param inputString: the given input string that will be converted into a gamestate
  * @param gamestate: the gamestate to save the convertion in
  *
- * @exit: NOINPUT: if the input enum is not set or not recognized 
+ * @warning: NOINPUT: if the input enum is not set or not recognized 
  * */
-void preprocessing(command_args* args, Gamestate* gamestate)  {
+static void preprocessing(command_args* args, Gamestate* gamestate)  {
     if (strcmp(args->inputString, "") == 0) {
         throwError(ERROR_NOINPUT, "Error: missing the inputString representing the board");
     }
@@ -23,7 +23,13 @@ void preprocessing(command_args* args, Gamestate* gamestate)  {
     }
 }
 
-void postprocessing(command_args* args, Gamestate* gamestate) {
+/*!
+ * Converts the result gamestate into a format to be output
+ *
+ * @param args: command line arguments passed in form of a pointer to command_args
+ * @param gamestate: the result move gamestate
+ * */
+static void postprocessing(command_args* args, Gamestate* gamestate) {
     if (!args->onlyPossibleMoves) {
         char moveString[20];
         printMove(&gamestate->move, moveString);
@@ -36,6 +42,14 @@ void postprocessing(command_args* args, Gamestate* gamestate) {
     }
 }
 
+/*!
+ * main function handling everything
+ * 
+ * @warning ERROR_MEMORY_MALLOC_FAILED: if malloc failed
+ * @warning ERROR_UNKNOWN_ARGUMENT: if the command line argument is unknown
+ * @warning ERROR_NOINPUT: if the command expects some input afterwards, but it is not given
+ *
+ * */
 int main(int argc, char *argv[]) {
     command_args* args = (command_args*)malloc(sizeof(command_args));
     if (args == NULL) {

@@ -13,7 +13,7 @@ int convertCharArrayToInt(char* charNumber) {
     return atoi(charNumber);
 }
 
-uint64_t reverseBitboard(uint64_t bitboard) {
+uint64_t reverseBitboard(const uint64_t bitboard) {
     uint64_t reverse = bitboard;
     reverse = ((reverse & 0x5555555555555555) << 1) | ((reverse >> 1) & 0x5555555555555555);
     reverse = ((reverse & 0x3333333333333333) << 2) | ((reverse >> 2) & 0x3333333333333333);

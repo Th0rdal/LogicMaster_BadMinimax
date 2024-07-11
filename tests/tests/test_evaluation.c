@@ -43,7 +43,10 @@ void test_evaluation1() {
 }
 
 void test_evaluation2() {
-    int maxThreads = 1;
+    command_args* args = (command_args*)malloc(sizeof(command_args));
+    args->maxDepth = 1;
+    args->maxThreads = 1;
+
     int expectedCapture = 0;
     int expectedNonCapture = -1;
     Gamestate *gamestate = gamestateInit();
@@ -65,7 +68,7 @@ void test_evaluation2() {
 
     // initialize tree
     initializeTree();
-    MoveGenerationThreadPool* pool = moveGenerationThreadPoolInit(1, 1);    
+    MoveGenerationThreadPool* pool = moveGenerationThreadPoolInit(args);    
     pool->workCounter++;
     enqueue(pool->queue, gamestate);
     
@@ -95,8 +98,8 @@ void test_evaluation2() {
     //printf("%f\n", ((double)end-start)/CLOCKS_PER_SEC);
     TEST_ASSERT_EQUAL_INT_MESSAGE(39, size(tree->head), "Error in creating tree for evaluation");
 
-    EvaluationThreadPool* evalPool = evaluationThreadPoolInit(maxThreads, tree->head);
-    for (int i = 0; i < maxThreads; i++) {
+    EvaluationThreadPool* evalPool = evaluationThreadPoolInit(args, tree->head);
+    for (int i = 0; i < args->maxThreads; i++) {
         evalPool->threads[i] = CreateThread(
             NULL,
             0,

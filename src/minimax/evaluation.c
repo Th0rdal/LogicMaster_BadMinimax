@@ -6,6 +6,7 @@ static GamestateTreeNode* getGamestateTreeNode(EvaluationThreadPool* pool);
  * evaluates a specific gamestate based on an algorithm.
  * Algorithm counts piece values for each sides and subtracts white pieces from black pieces
  * draw is evaluated as 0, checkmate is + or - 100
+ * NOT STATIC FOR TESTING PURPOSES
  *
  * @param gamestate: the gamestate to evaluate
  *
