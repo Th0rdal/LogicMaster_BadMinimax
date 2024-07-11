@@ -44,6 +44,7 @@ if not exist "%TEST_OBJECT_DIR%" (
 )
 
 REM Compile test files
+echo.
 echo Compiling test files...
 setlocal enabledelayedexpansion
 
@@ -92,12 +93,14 @@ REM Check if the build was successful
 echo Build successful.
 echo Test executable created at: %TEST_EXE%
 echo Static library created at: %TEST_OBJECT_DIR%\libmockexit.a
+echo.
 
 REM Run the test executable
 if "%2"=="gdb" (
 	gdb %TEST_EXE%
 ) else (
 	echo Running tests...
+    echo.
 	"%TEST_EXE%"
 )
 
